@@ -1,120 +1,118 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useTheme } from "@/components/ThemeProvider";
-import { Instagram, ArrowUpRight } from "lucide-react";
+import { Instagram, Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
-  const { theme } = useTheme();
-  const currentYear = new Date().getFullYear();
-  const logoSrc = theme === "dark" ? "/logo-dark.png" : "/logo-light.png";
-
-  const links = {
-    company: [
-      { name: "About", href: "/about" },
-      { name: "Services", href: "/services" },
-      { name: "Portfolio", href: "/portfolio" },
-      { name: "Clients", href: "/clients" },
-    ],
-    services: [
-      { name: "Web Design", href: "/services/web-design" },
-      { name: "Google Business", href: "/contact" },
-      { name: "Maintenance", href: "/contact" },
-      { name: "Contact", href: "/contact" },
-    ],
-    social: [
-      { name: "Instagram", href: "https://www.instagram.com/architeqwebagency/", icon: <Instagram className="h-4 w-4" /> },
-      { name: "WhatsApp", href: "https://wa.me/27694900189" },
-    ],
-  };
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border/30">
-      {/* CTA Banner */}
-      <div className="container mx-auto px-6 lg:px-8 py-20">
-        <div className="relative rounded-3xl overflow-hidden bg-foreground text-background p-12 lg:p-16">
-          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-2">
-                Let's Create Something Together
-              </h2>
-              <p className="text-background/60 text-lg">
-                Ready to transform your business? Let's talk.
+    <footer className="bg-background border-t" style={{ borderColor: "hsl(var(--rule))" }}>
+      {/* Closing CTA — drafting plate */}
+      <section className="px-6 lg:px-10 pt-16 lg:pt-24 pb-16">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex items-center justify-between mb-8">
+            <span className="plate-label">Sheet 05 / 05 — Contact</span>
+            <span className="tabular text-[10px] tracking-[0.2em] uppercase text-muted-foreground">
+              Reply within 24 hrs · Mon–Sat
+            </span>
+          </div>
+
+          <div className="grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-20 items-end">
+            <h2 className="display text-foreground" style={{ fontSize: "clamp(2.5rem, 8vw, 7rem)", lineHeight: 0.9 }}>
+              More calls.<br />
+              Booked solid.<br />
+              <span className="text-primary">Start this week.</span>
+            </h2>
+            <div className="flex flex-col gap-4">
+              <p className="text-muted-foreground text-lg max-w-md">
+                Tell us about your trade. We'll send back a fixed quote and a 7-day delivery plan — no sales call required.
               </p>
+              <div className="flex flex-wrap gap-3 pt-2">
+                <Link to="/contact" className="btn-ember">
+                  Request a quote
+                  <span className="tabular">→</span>
+                </Link>
+                <a href="tel:0694900189" className="btn-ghost-line">
+                  <Phone className="h-4 w-4" /> 069 490 0189
+                </a>
+              </div>
             </div>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-full border border-background/20 bg-background text-foreground px-8 py-3.5 text-sm font-medium hover:bg-background/90 transition-colors whitespace-nowrap"
-            >
-              Contact Us
-              <ArrowUpRight className="h-4 w-4" />
-            </Link>
           </div>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[120px]" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-[100px]" />
         </div>
-      </div>
+      </section>
 
-      {/* Footer Grid */}
-      <div className="container mx-auto px-6 lg:px-8 pb-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
-          <div className="col-span-2 md:col-span-1">
-            <Link to="/" className="inline-block mb-4">
-              <img src={logoSrc} alt="Architeq" className="h-8 w-auto object-contain" style={{ maxWidth: "160px" }} />
+      <div className="rule" />
+
+      {/* Lower grid */}
+      <div className="px-6 lg:px-10 py-12 mx-auto max-w-7xl">
+        <div className="grid grid-cols-2 md:grid-cols-12 gap-y-10 gap-x-6">
+          <div className="col-span-2 md:col-span-5">
+            <Link to="/" className="display text-3xl tracking-tight font-semibold">
+              Architeq<span className="text-primary">.</span>
             </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Professional websites delivered within 7 days. Fast, affordable, and built to convert.
+            <p className="mt-4 text-sm text-muted-foreground max-w-sm leading-relaxed">
+              Websites built for South African trades and home-services operators.
+              Quote-ready in 7 days. Built to bring in calls.
             </p>
+            <div className="mt-6 flex items-center gap-4">
+              <a
+                href="https://www.instagram.com/architeqwebagency/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="p-2 border hover:bg-foreground hover:text-background transition-colors"
+                style={{ borderColor: "hsl(var(--rule))" }}
+              >
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a
+                href="https://wa.me/27694900189"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm tabular tracking-[0.16em] uppercase font-semibold hover:text-primary transition-colors"
+              >
+                WhatsApp →
+              </a>
+            </div>
           </div>
 
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4">Company</h4>
-            <ul className="space-y-3">
-              {links.company.map((link) => (
-                <li key={link.name}>
-                  <Link to={link.href} className="text-sm text-foreground/70 hover:text-foreground transition-colors">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+          <div className="md:col-span-3">
+            <p className="plate-label mb-4">Index</p>
+            <ul className="space-y-2.5 text-[15px]">
+              <li><Link to="/services" className="hover:text-primary transition-colors">Services</Link></li>
+              <li><Link to="/portfolio" className="hover:text-primary transition-colors">Portfolio</Link></li>
+              <li><Link to="/clients" className="hover:text-primary transition-colors">Clients</Link></li>
+              <li><Link to="/about" className="hover:text-primary transition-colors">About</Link></li>
+              <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
 
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4">Services</h4>
-            <ul className="space-y-3">
-              {links.services.map((link) => (
-                <li key={link.name}>
-                  <Link to={link.href} className="text-sm text-foreground/70 hover:text-foreground transition-colors">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="col-span-2 md:col-span-1">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4">Contact</h4>
-            <ul className="space-y-3 text-sm text-foreground/70">
-              <li><a href="tel:0694900189" className="hover:text-foreground transition-colors">069 490 0189</a></li>
-              <li><a href="mailto:admin@architeq.co.za" className="hover:text-foreground transition-colors whitespace-nowrap">admin@architeq.co.za</a></li>
-              <li className="flex items-center gap-4 pt-2">
-                {links.social.map((s) => (
-                  <a key={s.name} href={s.href} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-                    {s.icon || s.name}
-                  </a>
-                ))}
+          <div className="md:col-span-4">
+            <p className="plate-label mb-4">Contact</p>
+            <ul className="space-y-3 text-[15px]">
+              <li className="flex items-start gap-3">
+                <Phone className="h-4 w-4 mt-1 shrink-0 text-muted-foreground" />
+                <a href="tel:0694900189" className="tabular hover:text-primary transition-colors">069 490 0189</a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Mail className="h-4 w-4 mt-1 shrink-0 text-muted-foreground" />
+                <a href="mailto:admin@architeq.co.za" className="hover:text-primary transition-colors break-all">admin@architeq.co.za</a>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 mt-1 shrink-0 text-muted-foreground" />
+                <span className="text-muted-foreground">Pretoria, South Africa</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-border/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-muted-foreground">
-            © {currentYear} Architeq Web Agency. All rights reserved.
+        <div className="mt-12 pt-6 border-t flex flex-col md:flex-row justify-between gap-3" style={{ borderColor: "hsl(var(--border))" }}>
+          <p className="text-xs text-muted-foreground tabular tracking-wider">
+            © {year} Architeq Web Agency — All drawings rights reserved
           </p>
-          <div className="flex items-center gap-6 text-xs text-muted-foreground">
-            <span>South Africa</span>
-          </div>
+          <p className="text-xs text-muted-foreground tabular tracking-wider">
+            ZA · v.{year}.05 · Drawn in Pretoria
+          </p>
         </div>
       </div>
     </footer>

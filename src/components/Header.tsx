@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ArrowUpRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X, Phone } from "lucide-react";
 import { ModeToggle } from "@/components/ModeToggle";
 import { useTheme } from "@/components/ThemeProvider";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,17 +12,17 @@ const Header = () => {
   const { theme } = useTheme();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => setScrolled(window.scrollY > 12);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navigation = [
-    { name: "Services", href: "/services" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "Clients", href: "/clients" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+  const nav = [
+    { name: "Services", href: "/services", code: "01" },
+    { name: "Portfolio", href: "/portfolio", code: "02" },
+    { name: "Clients", href: "/clients", code: "03" },
+    { name: "About", href: "/about", code: "04" },
+    { name: "Contact", href: "/contact", code: "05" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -31,116 +30,106 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-500 ${
-        scrolled ? "py-2" : "py-3"
-      }`}
+      className="sticky top-0 z-50 transition-colors duration-300"
       style={{
-        background: scrolled
-          ? "hsl(var(--glass-bg))"
-          : "transparent",
-        backdropFilter: scrolled ? "blur(20px) saturate(180%)" : "none",
-        WebkitBackdropFilter: scrolled ? "blur(20px) saturate(180%)" : "none",
-        borderBottom: scrolled
-          ? "1px solid hsl(var(--glass-border))"
-          : "1px solid transparent",
+        background: scrolled ? "hsl(var(--background) / 0.85)" : "hsl(var(--background))",
+        backdropFilter: scrolled ? "blur(8px)" : "none",
+        borderBottom: "1px solid hsl(var(--rule))",
       }}
     >
-      <nav className="container mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center">
-            <img
-              src={logoSrc}
-              alt="Architeq Web Agency"
-              className="h-10 w-auto object-contain"
-              style={{ maxWidth: "200px" }}
-            />
-          </Link>
+      {/* Top utility strip — drafting sheet header */}
+      <div className="hidden md:flex items-center justify-between px-6 lg:px-10 py-2 text-[10px] tracking-[0.18em] uppercase font-semibold tabular border-b" style={{ borderColor: "hsl(var(--border))" }}>
+        <span>Architeq Web Agency · Est. 2022 · Pretoria, ZA</span>
+        <span className="flex items-center gap-5">
+          <span>Sheet 01 / 05</span>
+          <span>·</span>
+          <a href="tel:0694900189" className="hover:text-primary transition-colors inline-flex items-center gap-1.5">
+            <Phone className="h-3 w-3" /> 069 490 0189
+          </a>
+        </span>
+      </div>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center">
-            <div className="flex items-center gap-1 rounded-full border border-border/50 bg-background/50 backdrop-blur-sm px-2 py-1">
-              {navigation.map((item) => (
+      <nav className="px-6 lg:px-10 py-4 lg:py-5 flex items-center justify-between gap-6">
+        <Link to="/" className="flex items-center shrink-0">
+          <img src={logoSrc} alt="Architeq" className="h-9 w-auto object-contain" style={{ maxWidth: 180 }} />
+        </Link>
+
+        {/* Desktop nav — flat plate links with numerals */}
+        <div className="hidden md:flex items-center gap-1">
+          {nav.map((item) => (
+            <Link
+              key={item.name}
+              to={item.href}
+              className={`group relative px-4 py-2 text-[13px] font-medium transition-colors ${
+                isActive(item.href) ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <span className="tabular text-[9px] tracking-[0.2em] mr-1.5 opacity-50 group-hover:opacity-100 transition-opacity">{item.code}</span>
+              {item.name}
+              {isActive(item.href) && (
+                <span className="absolute -bottom-[1px] left-3 right-3 h-[2px] bg-primary" />
+              )}
+            </Link>
+          ))}
+        </div>
+
+        <div className="hidden md:flex items-center gap-3">
+          <ModeToggle />
+          <Link to="/contact" className="btn-ember text-sm py-2.5 px-5">
+            Start a project
+            <span className="tabular text-[10px] opacity-70">→</span>
+          </Link>
+        </div>
+
+        {/* Mobile */}
+        <div className="md:hidden flex items-center gap-2">
+          <a href="tel:0694900189" className="btn-ember text-[13px] py-2 px-3.5">
+            <Phone className="h-3.5 w-3.5" /> Call
+          </a>
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="p-2 border"
+            style={{ borderColor: "hsl(var(--rule))" }}
+            aria-label="Menu"
+          >
+            {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
+          </button>
+        </div>
+      </nav>
+
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="md:hidden overflow-hidden border-t"
+            style={{ borderColor: "hsl(var(--border))" }}
+          >
+            <div className="px-6 py-5 flex flex-col">
+              {nav.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-4 py-1.5 rounded-full text-[13px] font-medium transition-all duration-300 ${
-                    isActive(item.href)
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-baseline justify-between py-3 border-b last:border-b-0"
+                  style={{ borderColor: "hsl(var(--border))" }}
                 >
-                  {item.name}
+                  <span className="display text-2xl font-medium">{item.name}</span>
+                  <span className="tabular text-[10px] tracking-[0.2em] text-muted-foreground">{item.code}</span>
                 </Link>
               ))}
-            </div>
-          </div>
-
-          <div className="hidden md:flex items-center gap-3">
-            <ModeToggle />
-            <Button
-              asChild
-              className="rounded-full px-5 h-9 text-[13px] font-medium gap-1.5 bg-foreground text-background hover:bg-foreground/90"
-            >
-              <Link to="/contact">
-                Get Started
-                <ArrowUpRight className="h-3.5 w-3.5" />
-              </Link>
-            </Button>
-          </div>
-
-          {/* Mobile */}
-          <div className="md:hidden flex items-center gap-2">
-            <ModeToggle />
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-full border border-border/50 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
-            </button>
-          </div>
-        </div>
-
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="md:hidden overflow-hidden"
-            >
-              <div className="py-6 space-y-1">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={`flex items-center justify-between px-4 py-3 rounded-2xl text-sm font-medium transition-all ${
-                      isActive(item.href)
-                        ? "bg-primary/10 text-primary"
-                        : "text-muted-foreground hover:bg-muted/50 hover:text-foreground"
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                    <ArrowUpRight className="h-4 w-4 opacity-40" />
-                  </Link>
-                ))}
-                <div className="pt-4">
-                  <Button
-                    asChild
-                    className="w-full rounded-full h-11 text-sm font-medium bg-foreground text-background hover:bg-foreground/90"
-                  >
-                    <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                      Get Started
-                      <ArrowUpRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </Button>
-                </div>
+              <div className="flex items-center justify-between pt-5">
+                <ModeToggle />
+                <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="btn-ember">
+                  Start a project →
+                </Link>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

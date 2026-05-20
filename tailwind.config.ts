@@ -104,7 +104,8 @@ export default {
 				'slide-in': 'slide-in 0.5s ease-out',
 			},
 			fontFamily: {
-				sans: ['Sora', '-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'sans-serif'],
+				sans: ['Familjen Grotesk', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				display: ['Bricolage Grotesque', 'Familjen Grotesk', 'sans-serif'],
 			},
 		}
 	},
