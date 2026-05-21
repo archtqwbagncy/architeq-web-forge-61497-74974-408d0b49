@@ -37,11 +37,11 @@ const Header = () => {
         borderBottom: "1px solid hsl(var(--rule))",
       }}
     >
-      {/* Top utility strip — drafting sheet header */}
+      {/* Top utility strip */}
       <div className="hidden md:flex items-center justify-between px-6 lg:px-10 py-2 text-[10px] tracking-[0.18em] uppercase font-semibold tabular border-b" style={{ borderColor: "hsl(var(--border))" }}>
-        <span>Architeq Web Agency · Est. 2022 · Pretoria, ZA</span>
+        <span>Architeq Web Agency · Est. 2022 · Gauteng, ZA · Nationwide</span>
         <span className="flex items-center gap-5">
-          <span>Sheet 01 / 05</span>
+          <span>Live in 7 days</span>
           <span>·</span>
           <a href="tel:0694900189" className="hover:text-primary transition-colors inline-flex items-center gap-1.5">
             <Phone className="h-3 w-3" /> 069 490 0189
