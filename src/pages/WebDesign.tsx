@@ -7,10 +7,10 @@ import { fadeUp } from "@/lib/animations";
 
 const WebDesign = () => {
   const packages = [
-    { name: "Essential Single Page", price: "R2,000+", description: "Perfect for getting started", features: ["Single Page Website", "Mobile Responsive", "Google Business Profile", "Contact Form"], deliveryTime: "1-2 Days" },
-    { name: "Starter Business", price: "R5,000+", description: "For small businesses", features: ["5 Pages", "Mobile Responsive", "Contact Form", "Google Business Profile", "Basic SEO Setup", "1 Month Support"], deliveryTime: "3-4 Days" },
-    { name: "Professional Growth", price: "R10,000+", description: "Most Popular", features: ["10 Pages", "Blog Setup", "Advanced SEO", "Social Media Integration", "Analytics Setup", "3 Months Support", "CMS"], deliveryTime: "5-7 Days", popular: true },
-    { name: "Enterprise Custom", price: "R15,000+", description: "Complete solution", features: ["Unlimited Pages", "E-commerce Integration", "Advanced Analytics", "Priority Support", "Custom Features", "6 Months Support", "Performance Optimization"], deliveryTime: "7-10 Days" },
+    { name: "Essential Single Page", price: "R2,000+", description: "Perfect for getting started", features: ["1-page website", "Mobile Responsive", "Google Business Profile", "Contact Form"], deliveryTime: "1-2 Days" },
+    { name: "Starter Business", price: "R5,000+", description: "For small businesses", features: ["Up to 5 pages", "Mobile Responsive", "Contact Form", "Google Business Profile", "Basic SEO Setup", "1 Month Support"], deliveryTime: "3-4 Days" },
+    { name: "Professional Growth", price: "R10,000+", description: "Most Popular", features: ["Up to 10 pages", "Blog Setup", "Advanced SEO", "Social Media Integration", "Analytics Setup", "3 Months Support", "CMS"], deliveryTime: "5-7 Days", popular: true },
+    { name: "Enterprise Custom", price: "R15,000+", description: "Complete solution", features: ["15+ pages, unlimited scope", "E-commerce Integration", "Advanced Analytics", "Priority Support", "Custom Features", "6 Months Support", "Performance Optimization"], deliveryTime: "7-10 Days" },
   ];
 
   const whyChooseUs = [
