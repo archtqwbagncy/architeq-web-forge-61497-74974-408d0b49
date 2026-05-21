@@ -7,11 +7,11 @@ const Footer = () => {
 
   return (
     <footer className="bg-background border-t" style={{ borderColor: "hsl(var(--rule))" }}>
-      {/* Closing CTA — drafting plate */}
+      {/* Closing CTA */}
       <section className="px-6 lg:px-10 pt-16 lg:pt-24 pb-16">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center justify-between mb-8">
-            <span className="plate-label">Sheet 05 / 05 — Contact</span>
+            <span className="plate-label">Get a fixed 7-day quote</span>
             <span className="tabular text-[10px] tracking-[0.2em] uppercase text-muted-foreground">
               Reply within 24 hrs · Mon–Sat
             </span>
@@ -100,7 +100,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 mt-1 shrink-0 text-muted-foreground" />
-                <span className="text-muted-foreground">Pretoria, South Africa</span>
+                <span className="text-muted-foreground">Gauteng, South Africa — serving SA nationwide</span>
               </li>
             </ul>
           </div>
@@ -108,10 +108,10 @@ const Footer = () => {
 
         <div className="mt-12 pt-6 border-t flex flex-col md:flex-row justify-between gap-3" style={{ borderColor: "hsl(var(--border))" }}>
           <p className="text-xs text-muted-foreground tabular tracking-wider">
-            © {year} Architeq Web Agency — All drawings rights reserved
+            © {year} Architeq Web Agency — All rights reserved
           </p>
           <p className="text-xs text-muted-foreground tabular tracking-wider">
-            ZA · v.{year}.05 · Drawn in Pretoria
+            Built in Gauteng · Serving South Africa nationwide
           </p>
         </div>
       </div>

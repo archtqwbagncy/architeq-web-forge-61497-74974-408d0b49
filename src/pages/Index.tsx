@@ -1,17 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Phone, Star } from "lucide-react";
+import { Phone, Star, Check } from "lucide-react";
 
 const Index = () => {
   const services = [
     { code: "01", title: "Lead-gen websites", line: "Phone-first layouts engineered to turn searches into booked jobs." },
     { code: "02", title: "Google Business setup", line: "Rank in the local 3-pack. Reviews, photos, service areas — handled." },
     { code: "03", title: "Quote & booking forms", line: "Capture the right details upfront so you can quote without phone tag." },
-    { code: "04", title: "Maintenance & speed", line: "Always on, always fast. We watch the site so you can stay on the roof." },
+    { code: "04", title: "Maintenance & speed", line: "Always on, always fast. We watch the site so you can stay on the job." },
   ];
 
-  const trades = ["Roofing", "HVAC", "Electrical", "Plumbing", "Construction", "Landscaping", "Painting", "Renovations", "Solar", "Cleaning"];
+  const industries = [
+    "Roofing", "HVAC", "Electrical", "Plumbing", "Construction", "Landscaping",
+    "Painting", "Renovations", "Solar", "Cleaning", "Accounting", "Pest Control",
+    "Security", "Auto Repair", "Movers", "Locksmiths",
+  ];
 
   const projects = [
     { name: "Lumavu Trading", image: "/portfolio/lumavu-trading.png", category: "Construction", plate: "PR-002" },
@@ -27,25 +31,25 @@ const Index = () => {
   ];
 
   const packages = [
-    { name: "Essential", price: "2 000", days: "3", lines: ["One-page site", "Mobile-first", "Click-to-call", "Google Business"] },
-    { name: "Starter", price: "5 000", days: "5", lines: ["5 pages", "Service area map", "Quote form", "Reviews block"] },
-    { name: "Professional", price: "10 000", days: "7", lines: ["10 pages + blog", "Local SEO setup", "Lead routing", "Booking-ready"], popular: true },
-    { name: "Enterprise", price: "15 000+", days: "10", lines: ["Unlimited pages", "Analytics + tracking", "Priority support", "Custom features"] },
+    { name: "Essential",    price: "2 000+",  days: "2",  pages: "1 page",     lines: ["One-page site", "Mobile-first", "Click-to-call", "Google Business"] },
+    { name: "Starter",      price: "5 000+",  days: "4",  pages: "Up to 5",    lines: ["5 pages", "Service area map", "Quote form", "Reviews block"] },
+    { name: "Professional", price: "10 000+", days: "7",  pages: "Up to 10",   lines: ["10 pages + blog", "Local SEO setup", "Lead routing", "Booking-ready"], popular: true },
+    { name: "Enterprise",   price: "15 000+", days: "10", pages: "15+ pages",  lines: ["Unlimited pages", "Analytics + tracking", "Priority support", "Custom features"] },
   ];
 
   return (
     <div className="min-h-screen bg-background">
-      {/* ============ HERO — Sheet 01 ============ */}
+      {/* ============ HERO ============ */}
       <section className="relative px-6 lg:px-10 pt-10 lg:pt-16 pb-20 lg:pb-28 overflow-hidden">
         <div className="mx-auto max-w-7xl">
-          <div className="flex items-center justify-between mb-10 lg:mb-16">
-            <span className="plate-label">Sheet 01 / 05 — Overview</span>
+          <div className="flex items-center justify-between mb-10 lg:mb-14">
+            <span className="plate-label">Live in 7 days — fixed price</span>
             <span className="tabular text-[10px] tracking-[0.2em] uppercase text-muted-foreground hidden sm:inline">
-              Drawn: {new Date().toLocaleDateString("en-ZA", { month: "short", year: "numeric" })} · Scale 1:1
+              Gauteng-based · Serving SA nationwide
             </span>
           </div>
 
-          {/* Asymmetric grid: huge headline + meta column */}
+          {/* Asymmetric grid */}
           <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-16 items-end">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -54,46 +58,43 @@ const Index = () => {
               className="display text-foreground"
               style={{ fontSize: "clamp(3rem, 11vw, 11rem)", lineHeight: 0.88, letterSpacing: "-0.055em" }}
             >
-              Websites
+              Your site,
               <br />
-              that ring
+              live in
               <br />
-              <span className="text-primary">the phone.</span>
+              <span className="text-primary">7 days.</span>
             </motion.h1>
 
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="lg:max-w-[260px] flex flex-col gap-6 lg:pb-4"
+              className="lg:max-w-[280px] flex flex-col gap-6 lg:pb-4"
             >
               <div>
                 <div className="drafting-numeral text-foreground" style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)" }}>
                   07<span className="text-primary">.</span>
                 </div>
                 <p className="text-sm text-muted-foreground tracking-wide mt-1">
-                  Days from brief to live. Quote-ready before week's end.
+                  Days from brief to live. Average build: 5. Fixed price. No drag-out timelines.
                 </p>
               </div>
               <div className="rule-thin" />
               <p className="text-[15px] leading-relaxed">
-                Built for South African roofers, HVAC techs, sparkies, plumbers and builders who want fewer tyre-kickers and more booked jobs.
+                Lead-generating websites for South African home-services and local businesses — roofers, HVAC, accounting, pest control and beyond. Built to bring in calls, not awards.
               </p>
             </motion.div>
           </div>
-
-          {/* Tick rule under hero */}
-          <div className="mt-12 lg:mt-16 tick-row" aria-hidden />
 
           {/* CTA row */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6"
+            className="mt-12 lg:mt-16 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6"
           >
             <Link to="/contact" className="btn-ember">
-              Request a quote
+              Get my 7-day quote
               <span className="tabular">→</span>
             </Link>
             <a href="tel:0694900189" className="btn-ghost-line">
@@ -108,15 +109,75 @@ const Index = () => {
               <span className="tabular tracking-wide">5.0 · Google reviewed</span>
             </div>
           </motion.div>
+
+          {/* Tick rule under CTAs */}
+          <div className="mt-12 lg:mt-16 tick-row" aria-hidden>
+            {Array.from({ length: 40 }).map((_, i) => <i key={i} />)}
+          </div>
+
+          {/* ============ DEVICE MOCKUPS ============ */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-16 lg:mt-24 relative"
+          >
+            <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-0 items-end">
+              {/* Laptop */}
+              <div className="relative mx-auto w-full max-w-3xl">
+                <div className="relative aspect-[16/10] rounded-t-2xl border-2 border-foreground bg-background overflow-hidden shadow-[0_30px_60px_-30px_hsl(var(--foreground)/0.35)]">
+                  <div className="absolute inset-x-0 top-0 h-7 bg-foreground flex items-center px-3 gap-1.5">
+                    <span className="h-2 w-2 rounded-full bg-background/40" />
+                    <span className="h-2 w-2 rounded-full bg-background/40" />
+                    <span className="h-2 w-2 rounded-full bg-background/40" />
+                    <span className="tabular text-[10px] tracking-[0.18em] uppercase text-background/70 ml-3">architeq.co.za</span>
+                  </div>
+                  <div className="absolute inset-0 pt-7 flex items-center justify-center bg-[hsl(var(--paper-tint))]">
+                    <img src="/logo-light.png" alt="Architeq logo on browser" className="w-1/2 max-w-[280px] dark:hidden" loading="lazy" />
+                    <img src="/logo-dark.png" alt="Architeq logo on browser" className="w-1/2 max-w-[280px] hidden dark:block" loading="lazy" />
+                  </div>
+                </div>
+                {/* Laptop base */}
+                <div className="h-3 bg-foreground rounded-b-lg mx-[-1.5%]" />
+                <div className="h-1 w-1/3 bg-foreground/70 mx-auto rounded-b" />
+              </div>
+
+              {/* Phone */}
+              <div className="relative mx-auto lg:ml-[-90px] lg:mb-[-24px] w-[180px] sm:w-[210px]">
+                <div className="relative aspect-[9/19] rounded-[2rem] border-2 border-foreground bg-background overflow-hidden shadow-[0_30px_60px_-30px_hsl(var(--foreground)/0.45)]">
+                  <div className="absolute top-2 left-1/2 -translate-x-1/2 h-5 w-20 bg-foreground rounded-full z-10" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-[hsl(var(--paper-tint))] pt-10 pb-6 px-4 gap-4">
+                    <img src="/logo-light.png" alt="Architeq logo on phone" className="w-3/4 dark:hidden" loading="lazy" />
+                    <img src="/logo-dark.png" alt="Architeq logo on phone" className="w-3/4 hidden dark:block" loading="lazy" />
+                    <div className="w-full space-y-1.5 mt-2">
+                      <div className="h-1.5 w-full bg-foreground/15 rounded" />
+                      <div className="h-1.5 w-4/5 bg-foreground/15 rounded" />
+                      <div className="h-1.5 w-2/3 bg-foreground/15 rounded" />
+                    </div>
+                    <div className="w-full mt-auto">
+                      <div className="h-7 w-full rounded-full bg-primary flex items-center justify-center text-[10px] text-primary-foreground font-semibold tabular tracking-wider uppercase">
+                        Get a Quote
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-6 flex items-center justify-between text-xs tabular tracking-[0.18em] uppercase text-muted-foreground">
+              <span>Mobile-first · Phone-ready · Click-to-call</span>
+              <span className="hidden sm:inline">Built in {new Date().getFullYear()}</span>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       <div className="rule" />
 
-      {/* ============ TRADES MARQUEE ============ */}
+      {/* ============ INDUSTRIES MARQUEE ============ */}
       <section className="py-6 lg:py-8 overflow-hidden bg-foreground text-background">
         <div className="flex marquee-track whitespace-nowrap" style={{ width: "max-content" }}>
-          {[...trades, ...trades, ...trades].map((t, i) => (
+          {[...industries, ...industries, ...industries].map((t, i) => (
             <span key={i} className="display flex items-center gap-10 px-6 text-3xl lg:text-5xl font-medium tracking-tight">
               {t}
               <span className="text-primary text-xl">●</span>
@@ -125,16 +186,16 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ============ SERVICES — Sheet 02 ============ */}
+      {/* ============ SERVICES ============ */}
       <section className="px-6 lg:px-10 py-20 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-end justify-between mb-12 lg:mb-20">
             <div>
-              <span className="plate-label mb-4 block">Sheet 02 / 05 — Services</span>
+              <span className="plate-label mb-4 block">What we build</span>
               <h2 className="display max-w-3xl" style={{ fontSize: "clamp(2rem, 5vw, 4.5rem)" }}>
                 Four sharp tools.
                 <br />
-                <span className="text-muted-foreground">No bloat, no bullshit.</span>
+                <span className="text-muted-foreground">No bloat, no filler.</span>
               </h2>
             </div>
             <Link to="/services" className="hidden md:inline-flex btn-ghost-line text-sm">
@@ -142,7 +203,6 @@ const Index = () => {
             </Link>
           </div>
 
-          {/* Numbered list rows — NOT identical icon cards */}
           <div>
             {services.map((s, i) => (
               <motion.div
@@ -199,12 +259,12 @@ const Index = () => {
 
       <div className="rule" />
 
-      {/* ============ PORTFOLIO — Sheet 03 ============ */}
+      {/* ============ PORTFOLIO ============ */}
       <section className="px-6 lg:px-10 py-20 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-end justify-between mb-12">
             <div>
-              <span className="plate-label mb-4 block">Sheet 03 / 05 — Recent work</span>
+              <span className="plate-label mb-4 block">Recent work</span>
               <h2 className="display" style={{ fontSize: "clamp(2rem, 5vw, 4.5rem)" }}>
                 Built. Live. <span className="text-primary">Earning.</span>
               </h2>
@@ -214,7 +274,6 @@ const Index = () => {
             </Link>
           </div>
 
-          {/* Off-grid: two columns with varied vertical rhythm */}
           <div className="grid md:grid-cols-2 gap-x-8 gap-y-12 lg:gap-y-20">
             {projects.map((p, i) => (
               <motion.div
@@ -254,12 +313,12 @@ const Index = () => {
 
       <div className="rule" />
 
-      {/* ============ TESTIMONIALS — pulled quotes, not cards ============ */}
+      {/* ============ TESTIMONIALS ============ */}
       <section className="px-6 lg:px-10 py-20 lg:py-32 bg-foreground text-background">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center justify-between mb-16">
             <span className="plate-label" style={{ color: "hsl(var(--background))" }}>
-              Sheet 04 / 05 — Field notes
+              What clients say
             </span>
             <div className="flex items-center gap-2 text-sm">
               <div className="flex items-center gap-0.5">
@@ -296,12 +355,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ============ PACKAGES — Sheet 05 (table-as-drawing) ============ */}
+      {/* ============ PACKAGES ============ */}
       <section className="px-6 lg:px-10 py-20 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-16">
             <div>
-              <span className="plate-label mb-4 block">Sheet 05 / 05 — Pricing</span>
+              <span className="plate-label mb-4 block">Pricing</span>
               <h2 className="display max-w-3xl" style={{ fontSize: "clamp(2rem, 5vw, 4.5rem)" }}>
                 Fixed price.
                 <br />
@@ -309,11 +368,10 @@ const Index = () => {
               </h2>
             </div>
             <p className="text-muted-foreground max-w-sm">
-              All packages billed in ZAR, 50% deposit, balance on launch. Hosting and one revision round included.
+              All packages billed in ZAR. 50% deposit, balance on launch. Hosting and one revision round included.
             </p>
           </div>
 
-          {/* Drafting table */}
           <div className="border-t border-b" style={{ borderColor: "hsl(var(--rule))" }}>
             {packages.map((p, i) => (
               <motion.div
@@ -325,12 +383,13 @@ const Index = () => {
                 className={`group grid grid-cols-12 items-start gap-4 py-7 lg:py-10 border-b last:border-b-0 transition-colors hover:bg-muted/40 ${p.popular ? "bg-primary/[0.04]" : ""}`}
                 style={{ borderColor: "hsl(var(--border))" }}
               >
-                <div className="col-span-12 lg:col-span-3 flex items-baseline gap-3">
+                <div className="col-span-12 lg:col-span-3 flex items-baseline gap-3 flex-wrap">
                   <span className="tabular text-xs text-muted-foreground tracking-[0.16em] uppercase font-semibold">0{i + 1}</span>
                   <h3 className="display text-2xl lg:text-3xl font-medium">{p.name}</h3>
                   {p.popular && (
                     <span className="key text-primary border-primary">Most picked</span>
                   )}
+                  <span className="tabular text-[11px] tracking-[0.14em] uppercase text-muted-foreground font-semibold w-full">{p.pages}</span>
                 </div>
 
                 <div className="col-span-6 lg:col-span-3">
@@ -350,7 +409,7 @@ const Index = () => {
                 <ul className="col-span-12 lg:col-span-3 space-y-1.5 text-sm">
                   {p.lines.map((l) => (
                     <li key={l} className="flex items-baseline gap-2">
-                      <span className="text-primary tabular text-xs">+</span>
+                      <Check className="h-3.5 w-3.5 text-primary shrink-0 translate-y-[2px]" />
                       <span>{l}</span>
                     </li>
                   ))}
@@ -368,8 +427,8 @@ const Index = () => {
             ))}
           </div>
 
-          <p className="mt-8 text-xs text-muted-foreground tabular tracking-wide">
-            Need something custom? <Link to="/contact" className="text-foreground hover:text-primary underline underline-offset-4">Talk to us →</Link>
+          <p className="mt-8 text-sm text-muted-foreground max-w-2xl">
+            Websites scale from a single landing page to 15+ pages. Need an exact figure? Send us the brief — we reply within 24 hours with a fixed quote.
           </p>
         </div>
       </section>

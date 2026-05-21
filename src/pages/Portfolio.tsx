@@ -7,16 +7,16 @@ import { fadeUp } from "@/lib/animations";
 
 const Portfolio = () => {
   const projects = [
-    { name: "H & N House of Beauty", image: "/portfolio/hn-house-of-beauty.png", category: "Beauty & Wellness", timeline: "3 days", cost: "R5,000" },
-    { name: "Dr Maise T", image: "/portfolio/dr-maise-t.png", category: "Healthcare", timeline: "2 days", cost: "R2,000" },
-    { name: "Lumavu Trading Enterprises", image: "/portfolio/lumavu-trading.png", category: "Construction", timeline: "4 days", cost: "R5,000" },
-    { name: "Home of Accounting Consulting", image: "/portfolio/hac-accounting.png", category: "Finance", timeline: "2 days", cost: "R5,000" },
-    { name: "GT Testing Civil & Construction", image: "/portfolio/gt-testing.png", category: "Construction & Testing", timeline: "3 days", cost: "R5,000" },
-    { name: "BlueEdge Designs", image: "/portfolio/blueedge-designs.png", category: "Design Agency", timeline: "1 day", cost: "R2,000" },
-    { name: "KTL Makeup Glam", image: "/portfolio/ktl-makeup-glam.png", category: "Beauty & Makeup", timeline: "1 day", cost: "R2,500" },
-    { name: "Katthales Holdings", image: "/portfolio/katthales-holdings.png", category: "Cleaning Services", timeline: "3 days", cost: "R5,000" },
-    { name: "MusicEar", image: "/portfolio/musicear.png", category: "Entertainment & Events", timeline: "1 day", cost: "R2,000" },
-    { name: "Netshifhefhe Attorneys", image: "/portfolio/netshifhefhe-attorneys.png", category: "Legal Services", timeline: "4 days", cost: "R7,000" },
+    { name: "H & N House of Beauty", image: "/portfolio/hn-house-of-beauty.png", category: "Beauty & Wellness", timeline: "3 days", cost: "R5,000+" },
+    { name: "Dr Maise T", image: "/portfolio/dr-maise-t.png", category: "Healthcare", timeline: "2 days", cost: "R2,000+" },
+    { name: "Lumavu Trading Enterprises", image: "/portfolio/lumavu-trading.png", category: "Construction", timeline: "4 days", cost: "R5,000+" },
+    { name: "Home of Accounting Consulting", image: "/portfolio/hac-accounting.png", category: "Finance", timeline: "2 days", cost: "R5,000+" },
+    { name: "GT Testing Civil & Construction", image: "/portfolio/gt-testing.png", category: "Construction & Testing", timeline: "3 days", cost: "R5,000+" },
+    { name: "BlueEdge Designs", image: "/portfolio/blueedge-designs.png", category: "Design Agency", timeline: "1 day", cost: "R2,000+" },
+    { name: "KTL Makeup Glam", image: "/portfolio/ktl-makeup-glam.png", category: "Beauty & Makeup", timeline: "1 day", cost: "R2,500+" },
+    { name: "Katthales Holdings", image: "/portfolio/katthales-holdings.png", category: "Cleaning Services", timeline: "3 days", cost: "R5,000+" },
+    { name: "MusicEar", image: "/portfolio/musicear.png", category: "Entertainment & Events", timeline: "1 day", cost: "R2,000+" },
+    { name: "Netshifhefhe Attorneys", image: "/portfolio/netshifhefhe-attorneys.png", category: "Legal Services", timeline: "4 days", cost: "R7,000+" },
   ];
 
   return (
