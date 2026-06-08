@@ -115,60 +115,6 @@ const Index = () => {
             {Array.from({ length: 40 }).map((_, i) => <i key={i} />)}
           </div>
 
-          {/* ============ DEVICE MOCKUPS ============ */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-16 lg:mt-24 relative"
-          >
-            <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-0 items-end">
-              {/* Laptop */}
-              <div className="relative mx-auto w-full max-w-3xl">
-                <div className="relative aspect-[16/10] rounded-t-2xl border-2 border-foreground bg-background overflow-hidden shadow-[0_30px_60px_-30px_hsl(var(--foreground)/0.35)]">
-                  <div className="absolute inset-x-0 top-0 h-7 bg-foreground flex items-center px-3 gap-1.5">
-                    <span className="h-2 w-2 rounded-full bg-background/40" />
-                    <span className="h-2 w-2 rounded-full bg-background/40" />
-                    <span className="h-2 w-2 rounded-full bg-background/40" />
-                    <span className="tabular text-[10px] tracking-[0.18em] uppercase text-background/70 ml-3">architeq.co.za</span>
-                  </div>
-                  <div className="absolute inset-0 pt-7 flex items-center justify-center bg-[hsl(var(--paper-tint))]">
-                    <img src="/logo-light.png" alt="Architeq logo on browser" className="w-1/2 max-w-[280px] dark:hidden" loading="lazy" />
-                    <img src="/logo-dark.png" alt="Architeq logo on browser" className="w-1/2 max-w-[280px] hidden dark:block" loading="lazy" />
-                  </div>
-                </div>
-                {/* Laptop base */}
-                <div className="h-3 bg-foreground rounded-b-lg mx-[-1.5%]" />
-                <div className="h-1 w-1/3 bg-foreground/70 mx-auto rounded-b" />
-              </div>
-
-              {/* Phone */}
-              <div className="relative mx-auto lg:ml-[-90px] lg:mb-[-24px] w-[180px] sm:w-[210px]">
-                <div className="relative aspect-[9/19] rounded-[2rem] border-2 border-foreground bg-background overflow-hidden shadow-[0_30px_60px_-30px_hsl(var(--foreground)/0.45)]">
-                  <div className="absolute top-2 left-1/2 -translate-x-1/2 h-5 w-20 bg-foreground rounded-full z-10" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-[hsl(var(--paper-tint))] pt-10 pb-6 px-4 gap-4">
-                    <img src="/logo-light.png" alt="Architeq logo on phone" className="w-3/4 dark:hidden" loading="lazy" />
-                    <img src="/logo-dark.png" alt="Architeq logo on phone" className="w-3/4 hidden dark:block" loading="lazy" />
-                    <div className="w-full space-y-1.5 mt-2">
-                      <div className="h-1.5 w-full bg-foreground/15 rounded" />
-                      <div className="h-1.5 w-4/5 bg-foreground/15 rounded" />
-                      <div className="h-1.5 w-2/3 bg-foreground/15 rounded" />
-                    </div>
-                    <div className="w-full mt-auto">
-                      <div className="h-7 w-full rounded-full bg-primary flex items-center justify-center text-[10px] text-primary-foreground font-semibold tabular tracking-wider uppercase">
-                        Get a Quote
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="mt-6 flex items-center justify-between text-xs tabular tracking-[0.18em] uppercase text-muted-foreground">
-              <span>Mobile-first · Phone-ready · Click-to-call</span>
-              <span className="hidden sm:inline">Built in {new Date().getFullYear()}</span>
-            </div>
-          </motion.div>
         </div>
       </section>
 
