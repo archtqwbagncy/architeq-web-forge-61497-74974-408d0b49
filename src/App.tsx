@@ -10,6 +10,9 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
 import WebDesign from "./pages/WebDesign";
+import CustomEmail from "./pages/CustomEmail";
+import SaasMvp from "./pages/SaasMvp";
+import CustomSoftware from "./pages/CustomSoftware";
 import Portfolio from "./pages/Portfolio";
 import ClientShowcase from "./pages/ClientShowcase";
 
@@ -45,6 +48,9 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/services/web-design" element={<WebDesign />} />
+                <Route path="/services/custom-email" element={<CustomEmail />} />
+                <Route path="/services/saas-mvp" element={<SaasMvp />} />
+                <Route path="/services/custom-software" element={<CustomSoftware />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/clients" element={<ClientShowcase />} />
                 <Route path="/about" element={<About />} />
