@@ -192,6 +192,106 @@ const Index = () => {
 
       <div className="rule" />
 
+      {/* ============ NEW SERVICES ============ */}
+      <section className="px-6 lg:px-10 py-20 lg:py-32 bg-muted/30">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-16">
+            <div>
+              <span className="plate-label mb-4 block">More from Architeq</span>
+              <h2 className="display max-w-3xl" style={{ fontSize: "clamp(2rem, 5vw, 4.5rem)" }}>
+                Beyond websites.
+                <br />
+                <span className="text-muted-foreground">Email, platforms, software.</span>
+              </h2>
+            </div>
+            <p className="text-muted-foreground max-w-sm">
+              Three more ways we help South African businesses move faster — branded inboxes, MVP launches, and custom software.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-5">
+            {newServices.map((s, i) => (
+              <motion.div
+                key={s.code}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.55, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                className="group relative p-7 lg:p-8 rounded-3xl border border-border/40 bg-background hover:border-primary/40 hover:-translate-y-1.5 hover:shadow-xl transition-all duration-500 flex flex-col"
+              >
+                <div className="flex items-start justify-between mb-6">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    {s.icon}
+                  </div>
+                  <span className="tabular text-[10px] tracking-[0.18em] uppercase text-muted-foreground font-semibold">{s.code}</span>
+                </div>
+                <h3 className="display text-2xl font-medium mb-3">{s.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">{s.body}</p>
+                <div className="grid grid-cols-2 gap-3 mb-6 pt-4 border-t" style={{ borderColor: "hsl(var(--border))" }}>
+                  <div>
+                    <p className="text-[10px] tabular tracking-[0.16em] uppercase text-muted-foreground font-semibold mb-1">From</p>
+                    <p className="text-sm font-semibold text-foreground">{s.price}</p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] tabular tracking-[0.16em] uppercase text-muted-foreground font-semibold mb-1">Timeline</p>
+                    <p className="text-sm font-semibold text-foreground">{s.timeline}</p>
+                  </div>
+                </div>
+                <Link to={s.href} className="inline-flex items-center justify-between w-full px-5 py-3 rounded-full bg-foreground text-background text-sm font-medium hover:bg-primary transition-colors">
+                  {s.cta}
+                  <ArrowUpRight className="h-4 w-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="rule" />
+
+      {/* ============ USP — IDEA TO LAUNCH ============ */}
+      <section className="px-6 lg:px-10 py-20 lg:py-32">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-20 items-start mb-14 lg:mb-20">
+            <div>
+              <span className="plate-label mb-4 block">How we work</span>
+              <h2 className="display" style={{ fontSize: "clamp(2.25rem, 6vw, 5.5rem)", lineHeight: 0.92 }}>
+                Move from idea
+                <br />
+                to launch
+                <br />
+                <span className="text-primary">faster.</span>
+              </h2>
+            </div>
+            <p className="text-muted-foreground text-lg leading-relaxed lg:pt-8">
+              Many agencies spend weeks in meetings before any real work begins. We focus on streamlined communication, rapid execution and clear milestones so your project starts moving forward immediately.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+            {usp.map((u, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: i * 0.06 }}
+                className="p-6 rounded-2xl border border-border/40 hover:border-primary/40 hover:bg-muted/30 transition-all duration-500"
+              >
+                <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary mb-4">
+                  {u.icon}
+                </div>
+                <h3 className="font-semibold text-[15px] mb-1.5">{u.title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{u.body}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="rule" />
+
+
       {/* ============ NUMBERS / PROOF ============ */}
       <section className="px-6 lg:px-10 py-16 lg:py-24">
         <div className="mx-auto max-w-7xl grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6">
