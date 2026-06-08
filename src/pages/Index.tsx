@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Phone, Star, Check } from "lucide-react";
+import { Phone, Star, Check, Mail, Rocket, Cpu, ArrowUpRight, Gauge, Milestone, MessagesSquare, Zap, Target } from "lucide-react";
 
 const Index = () => {
   const services = [
@@ -31,10 +31,24 @@ const Index = () => {
   ];
 
   const packages = [
-    { name: "Essential",    price: "2 000+",  days: "2",  pages: "1 page",     lines: ["One-page site", "Mobile-first", "Click-to-call", "Google Business"] },
-    { name: "Starter",      price: "5 000+",  days: "4",  pages: "Up to 5",    lines: ["5 pages", "Service area map", "Quote form", "Reviews block"] },
-    { name: "Professional", price: "10 000+", days: "7",  pages: "Up to 10",   lines: ["10 pages + blog", "Local SEO setup", "Lead routing", "Booking-ready"], popular: true },
-    { name: "Enterprise",   price: "15 000+", days: "10", pages: "15+ pages",  lines: ["Unlimited pages", "Analytics + tracking", "Priority support", "Custom features"] },
+    { name: "Essential",    price: "1 999+",  days: "2",  pages: "1 page",     lines: ["One-page site", "Mobile-first", "Click-to-call", "Google Business"] },
+    { name: "Starter",      price: "4 999+",  days: "4",  pages: "Up to 5",    lines: ["5 pages", "Service area map", "Quote form", "Reviews block"] },
+    { name: "Professional", price: "9 999+",  days: "7",  pages: "Up to 10",   lines: ["10 pages + blog", "Local SEO setup", "Lead routing", "Booking-ready"], popular: true },
+    { name: "Enterprise",   price: "14 999+", days: "10", pages: "15+ pages",  lines: ["Unlimited pages", "Analytics + tracking", "Priority support", "Custom features"] },
+  ];
+
+  const newServices = [
+    { icon: <Mail className="h-6 w-6" />, code: "NS-01", title: "Custom Email Services", body: "Branded business email setup with Gmail integration. Zero monthly cost, live in under 24 hours.", price: "From R499+", timeline: "< 24 hours", cta: "Get Professional Email", href: "/services/custom-email" },
+    { icon: <Rocket className="h-6 w-6" />, code: "NS-02", title: "SaaS & MVP Development", body: "Turn your business idea into a working online platform — booking systems, portals, dashboards, subscription products.", price: "From R24 999+", timeline: "2–4 weeks", cta: "Build My Platform", href: "/services/saas-mvp" },
+    { icon: <Cpu className="h-6 w-6" />, code: "NS-03", title: "Custom Software Development", body: "Custom software built around your business goals, processes and workflows. Internal tools, automation, full platforms.", price: "From R34 999+", timeline: "3–6 weeks", cta: "Get A Software Quote", href: "/services/custom-software" },
+  ];
+
+  const usp = [
+    { icon: <Gauge className="h-5 w-5" />, title: "Faster turnaround times", body: "Days, not months. We start work the day you sign off." },
+    { icon: <Milestone className="h-5 w-5" />, title: "Clear project milestones", body: "You always know what's shipping next and when." },
+    { icon: <MessagesSquare className="h-5 w-5" />, title: "Direct communication", body: "Talk to the people building your project — not account managers." },
+    { icon: <Zap className="h-5 w-5" />, title: "Less back-and-forth", body: "Tight briefs, decisive feedback rounds, no meeting bloat." },
+    { icon: <Target className="h-5 w-5" />, title: "Results-focused execution", body: "Every decision serves the outcome you're trying to drive." },
   ];
 
   return (
@@ -177,6 +191,106 @@ const Index = () => {
       </section>
 
       <div className="rule" />
+
+      {/* ============ NEW SERVICES ============ */}
+      <section className="px-6 lg:px-10 py-20 lg:py-32 bg-muted/30">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-16">
+            <div>
+              <span className="plate-label mb-4 block">More from Architeq</span>
+              <h2 className="display max-w-3xl" style={{ fontSize: "clamp(2rem, 5vw, 4.5rem)" }}>
+                Beyond websites.
+                <br />
+                <span className="text-muted-foreground">Email, platforms, software.</span>
+              </h2>
+            </div>
+            <p className="text-muted-foreground max-w-sm">
+              Three more ways we help South African businesses move faster — branded inboxes, MVP launches, and custom software.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-5">
+            {newServices.map((s, i) => (
+              <motion.div
+                key={s.code}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.55, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                className="group relative p-7 lg:p-8 rounded-3xl border border-border/40 bg-background hover:border-primary/40 hover:-translate-y-1.5 hover:shadow-xl transition-all duration-500 flex flex-col"
+              >
+                <div className="flex items-start justify-between mb-6">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    {s.icon}
+                  </div>
+                  <span className="tabular text-[10px] tracking-[0.18em] uppercase text-muted-foreground font-semibold">{s.code}</span>
+                </div>
+                <h3 className="display text-2xl font-medium mb-3">{s.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">{s.body}</p>
+                <div className="grid grid-cols-2 gap-3 mb-6 pt-4 border-t" style={{ borderColor: "hsl(var(--border))" }}>
+                  <div>
+                    <p className="text-[10px] tabular tracking-[0.16em] uppercase text-muted-foreground font-semibold mb-1">From</p>
+                    <p className="text-sm font-semibold text-foreground">{s.price}</p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] tabular tracking-[0.16em] uppercase text-muted-foreground font-semibold mb-1">Timeline</p>
+                    <p className="text-sm font-semibold text-foreground">{s.timeline}</p>
+                  </div>
+                </div>
+                <Link to={s.href} className="inline-flex items-center justify-between w-full px-5 py-3 rounded-full bg-foreground text-background text-sm font-medium hover:bg-primary transition-colors">
+                  {s.cta}
+                  <ArrowUpRight className="h-4 w-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="rule" />
+
+      {/* ============ USP — IDEA TO LAUNCH ============ */}
+      <section className="px-6 lg:px-10 py-20 lg:py-32">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-20 items-start mb-14 lg:mb-20">
+            <div>
+              <span className="plate-label mb-4 block">How we work</span>
+              <h2 className="display" style={{ fontSize: "clamp(2.25rem, 6vw, 5.5rem)", lineHeight: 0.92 }}>
+                Move from idea
+                <br />
+                to launch
+                <br />
+                <span className="text-primary">faster.</span>
+              </h2>
+            </div>
+            <p className="text-muted-foreground text-lg leading-relaxed lg:pt-8">
+              Many agencies spend weeks in meetings before any real work begins. We focus on streamlined communication, rapid execution and clear milestones so your project starts moving forward immediately.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+            {usp.map((u, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: i * 0.06 }}
+                className="p-6 rounded-2xl border border-border/40 hover:border-primary/40 hover:bg-muted/30 transition-all duration-500"
+              >
+                <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary mb-4">
+                  {u.icon}
+                </div>
+                <h3 className="font-semibold text-[15px] mb-1.5">{u.title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{u.body}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="rule" />
+
 
       {/* ============ NUMBERS / PROOF ============ */}
       <section className="px-6 lg:px-10 py-16 lg:py-24">

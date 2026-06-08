@@ -25,6 +25,14 @@ const Header = () => {
     { name: "Contact", href: "/contact", code: "05" },
   ];
 
+  const serviceItems = [
+    { name: "Web Design", href: "/services/web-design", desc: "Lead-gen websites in 7 days" },
+    { name: "Custom Email", href: "/services/custom-email", desc: "Branded business inboxes" },
+    { name: "SaaS & MVP", href: "/services/saas-mvp", desc: "Launch your platform fast" },
+    { name: "Custom Software", href: "/services/custom-software", desc: "Built around your workflows" },
+    { name: "All services", href: "/services", desc: "Full service menu" },
+  ];
+
   const isActive = (path: string) => location.pathname === path;
   const logoSrc = theme === "dark" ? "/logo-dark.png" : "/logo-light.png";
 
@@ -56,21 +64,46 @@ const Header = () => {
 
         {/* Desktop nav — flat plate links with numerals */}
         <div className="hidden md:flex items-center gap-1">
-          {nav.map((item) => (
-            <Link
-              key={item.name}
-              to={item.href}
-              className={`group relative px-4 py-2 text-[13px] font-medium transition-colors ${
-                isActive(item.href) ? "text-foreground" : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              <span className="tabular text-[9px] tracking-[0.2em] mr-1.5 opacity-50 group-hover:opacity-100 transition-opacity">{item.code}</span>
-              {item.name}
-              {isActive(item.href) && (
-                <span className="absolute -bottom-[1px] left-3 right-3 h-[2px] bg-primary" />
-              )}
-            </Link>
-          ))}
+          {nav.map((item) => {
+            const isServices = item.name === "Services";
+            return (
+              <div key={item.name} className={isServices ? "relative group" : undefined}>
+                <Link
+                  to={item.href}
+                  className={`group/link relative px-4 py-2 text-[13px] font-medium transition-colors inline-flex items-center ${
+                    isActive(item.href) || (isServices && location.pathname.startsWith("/services")) ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  <span className="tabular text-[9px] tracking-[0.2em] mr-1.5 opacity-50 group-hover/link:opacity-100 transition-opacity">{item.code}</span>
+                  {item.name}
+                  {(isActive(item.href) || (isServices && location.pathname.startsWith("/services"))) && (
+                    <span className="absolute -bottom-[1px] left-3 right-3 h-[2px] bg-primary" />
+                  )}
+                </Link>
+
+                {isServices && (
+                  <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div
+                      className="w-72 border bg-background shadow-xl overflow-hidden"
+                      style={{ borderColor: "hsl(var(--border))" }}
+                    >
+                      {serviceItems.map((s) => (
+                        <Link
+                          key={s.href}
+                          to={s.href}
+                          className="block px-4 py-3 border-b last:border-b-0 hover:bg-muted transition-colors"
+                          style={{ borderColor: "hsl(var(--border))" }}
+                        >
+                          <div className="text-sm font-medium">{s.name}</div>
+                          <div className="text-xs text-muted-foreground mt-0.5">{s.desc}</div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
 
         <div className="hidden md:flex items-center gap-3">
@@ -109,16 +142,31 @@ const Header = () => {
           >
             <div className="px-6 py-5 flex flex-col">
               {nav.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="flex items-baseline justify-between py-3 border-b last:border-b-0"
-                  style={{ borderColor: "hsl(var(--border))" }}
-                >
-                  <span className="display text-2xl font-medium">{item.name}</span>
-                  <span className="tabular text-[10px] tracking-[0.2em] text-muted-foreground">{item.code}</span>
-                </Link>
+                <div key={item.name}>
+                  <Link
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="flex items-baseline justify-between py-3 border-b"
+                    style={{ borderColor: "hsl(var(--border))" }}
+                  >
+                    <span className="display text-2xl font-medium">{item.name}</span>
+                    <span className="tabular text-[10px] tracking-[0.2em] text-muted-foreground">{item.code}</span>
+                  </Link>
+                  {item.name === "Services" && (
+                    <div className="pl-4 py-2 flex flex-col border-b" style={{ borderColor: "hsl(var(--border))" }}>
+                      {serviceItems.filter(s => s.href !== "/services").map((s) => (
+                        <Link
+                          key={s.href}
+                          to={s.href}
+                          onClick={() => setIsMenuOpen(false)}
+                          className="py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                          → {s.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               <div className="flex items-center justify-between pt-5">
                 <ModeToggle />
