@@ -142,16 +142,31 @@ const Header = () => {
           >
             <div className="px-6 py-5 flex flex-col">
               {nav.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="flex items-baseline justify-between py-3 border-b last:border-b-0"
-                  style={{ borderColor: "hsl(var(--border))" }}
-                >
-                  <span className="display text-2xl font-medium">{item.name}</span>
-                  <span className="tabular text-[10px] tracking-[0.2em] text-muted-foreground">{item.code}</span>
-                </Link>
+                <div key={item.name}>
+                  <Link
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="flex items-baseline justify-between py-3 border-b"
+                    style={{ borderColor: "hsl(var(--border))" }}
+                  >
+                    <span className="display text-2xl font-medium">{item.name}</span>
+                    <span className="tabular text-[10px] tracking-[0.2em] text-muted-foreground">{item.code}</span>
+                  </Link>
+                  {item.name === "Services" && (
+                    <div className="pl-4 py-2 flex flex-col border-b" style={{ borderColor: "hsl(var(--border))" }}>
+                      {serviceItems.filter(s => s.href !== "/services").map((s) => (
+                        <Link
+                          key={s.href}
+                          to={s.href}
+                          onClick={() => setIsMenuOpen(false)}
+                          className="py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                          → {s.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               <div className="flex items-center justify-between pt-5">
                 <ModeToggle />
