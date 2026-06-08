@@ -7,9 +7,12 @@ import { fadeUp } from "@/lib/animations";
 
 const Services = () => {
   const services = [
-    { title: "Web Design Services", description: "Professional websites delivered within 7 days", features: ["1 page to 15+ pages", "Mobile Responsive", "SEO Optimized", "Fast Delivery"], startingPrice: "R2,000+", link: "/services/web-design", icon: <Globe className="h-6 w-6" /> },
-    { title: "Google Business Profile", description: "Get found on Google Maps & Search", features: ["Profile Setup & Optimization", "Google Maps Listing", "Review Management", "Local SEO Boost"], startingPrice: "R750+", link: "/contact", icon: <Zap className="h-6 w-6" /> },
-    { title: "Website Maintenance", description: "Keep your website running smoothly", features: ["Security Updates", "Bug Fixes", "Performance Monitoring", "Content Updates"], startingPrice: "R1,500+/month", link: "/contact", icon: <Settings className="h-6 w-6" /> },
+    { title: "Web Design Services", description: "Professional websites delivered within 7 days", features: ["1 page to 15+ pages", "Mobile Responsive", "SEO Optimized", "Fast Delivery"], startingPrice: "R1,999+", link: "/services/web-design", icon: <Globe className="h-6 w-6" /> },
+    { title: "Custom Email Services", description: "Branded business email with Gmail integration", features: ["Domain email setup", "Gmail send & receive", "Full DNS configuration", "Live in < 24 hours"], startingPrice: "R499+", link: "/services/custom-email", icon: <Settings className="h-6 w-6" /> },
+    { title: "SaaS & MVP Development", description: "Launch your software platform in weeks", features: ["Booking systems", "Customer portals", "Dashboards", "Scalable foundations"], startingPrice: "R24,999+", link: "/services/saas-mvp", icon: <Zap className="h-6 w-6" /> },
+    { title: "Custom Software Development", description: "Software built around your business workflows", features: ["Internal tools", "Automation", "Custom dashboards", "Long-term scalability"], startingPrice: "R34,999+", link: "/services/custom-software", icon: <Settings className="h-6 w-6" /> },
+    { title: "Google Business Profile", description: "Get found on Google Maps & Search", features: ["Profile Setup & Optimization", "Google Maps Listing", "Review Management", "Local SEO Boost"], startingPrice: "R749+", link: "/contact", icon: <Zap className="h-6 w-6" /> },
+    { title: "Website Maintenance", description: "Keep your website running smoothly", features: ["Security Updates", "Bug Fixes", "Performance Monitoring", "Content Updates"], startingPrice: "R299+/month", link: "/contact", icon: <Settings className="h-6 w-6" /> },
   ];
 
   return (
@@ -53,7 +56,7 @@ const Services = () => {
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Our Digital Services</h2>
             <p className="text-lg text-muted-foreground">Choose the perfect service for your business needs</p>
           </motion.div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {services.map((service, index) => (
               <motion.div key={index} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={index}
                 className="p-8 rounded-3xl border border-border/30 hover:border-primary/20 transition-all duration-500"
