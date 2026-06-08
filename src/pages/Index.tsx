@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Phone, Star, Check } from "lucide-react";
+import { Phone, Star, Check, Mail, Rocket, Cpu, ArrowUpRight, Gauge, Milestone, MessagesSquare, Zap, Target } from "lucide-react";
 
 const Index = () => {
   const services = [
@@ -31,10 +31,24 @@ const Index = () => {
   ];
 
   const packages = [
-    { name: "Essential",    price: "2 000+",  days: "2",  pages: "1 page",     lines: ["One-page site", "Mobile-first", "Click-to-call", "Google Business"] },
-    { name: "Starter",      price: "5 000+",  days: "4",  pages: "Up to 5",    lines: ["5 pages", "Service area map", "Quote form", "Reviews block"] },
-    { name: "Professional", price: "10 000+", days: "7",  pages: "Up to 10",   lines: ["10 pages + blog", "Local SEO setup", "Lead routing", "Booking-ready"], popular: true },
-    { name: "Enterprise",   price: "15 000+", days: "10", pages: "15+ pages",  lines: ["Unlimited pages", "Analytics + tracking", "Priority support", "Custom features"] },
+    { name: "Essential",    price: "1 999+",  days: "2",  pages: "1 page",     lines: ["One-page site", "Mobile-first", "Click-to-call", "Google Business"] },
+    { name: "Starter",      price: "4 999+",  days: "4",  pages: "Up to 5",    lines: ["5 pages", "Service area map", "Quote form", "Reviews block"] },
+    { name: "Professional", price: "9 999+",  days: "7",  pages: "Up to 10",   lines: ["10 pages + blog", "Local SEO setup", "Lead routing", "Booking-ready"], popular: true },
+    { name: "Enterprise",   price: "14 999+", days: "10", pages: "15+ pages",  lines: ["Unlimited pages", "Analytics + tracking", "Priority support", "Custom features"] },
+  ];
+
+  const newServices = [
+    { icon: <Mail className="h-6 w-6" />, code: "NS-01", title: "Custom Email Services", body: "Branded business email setup with Gmail integration. Zero monthly cost, live in under 24 hours.", price: "From R499+", timeline: "< 24 hours", cta: "Get Professional Email", href: "/services/custom-email" },
+    { icon: <Rocket className="h-6 w-6" />, code: "NS-02", title: "SaaS & MVP Development", body: "Turn your business idea into a working online platform — booking systems, portals, dashboards, subscription products.", price: "From R24 999+", timeline: "2–4 weeks", cta: "Build My Platform", href: "/services/saas-mvp" },
+    { icon: <Cpu className="h-6 w-6" />, code: "NS-03", title: "Custom Software Development", body: "Custom software built around your business goals, processes and workflows. Internal tools, automation, full platforms.", price: "From R34 999+", timeline: "3–6 weeks", cta: "Get A Software Quote", href: "/services/custom-software" },
+  ];
+
+  const usp = [
+    { icon: <Gauge className="h-5 w-5" />, title: "Faster turnaround times", body: "Days, not months. We start work the day you sign off." },
+    { icon: <Milestone className="h-5 w-5" />, title: "Clear project milestones", body: "You always know what's shipping next and when." },
+    { icon: <MessagesSquare className="h-5 w-5" />, title: "Direct communication", body: "Talk to the people building your project — not account managers." },
+    { icon: <Zap className="h-5 w-5" />, title: "Less back-and-forth", body: "Tight briefs, decisive feedback rounds, no meeting bloat." },
+    { icon: <Target className="h-5 w-5" />, title: "Results-focused execution", body: "Every decision serves the outcome you're trying to drive." },
   ];
 
   return (
