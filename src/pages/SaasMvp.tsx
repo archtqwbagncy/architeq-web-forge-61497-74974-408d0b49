@@ -24,11 +24,11 @@ const packages = [
 ];
 
 const process = [
-  { code: "01", title: "Discovery", body: "Map the core problem, users and must-have features. No scope bloat." },
-  { code: "02", title: "Design", body: "Clickable UI and flows so you see the product before we build it." },
-  { code: "03", title: "Development", body: "Modern stack, clean code, shipped in milestones — not in a black box." },
-  { code: "04", title: "Testing", body: "Real-user testing across devices. Bugs fixed before you see them." },
-  { code: "05", title: "Launch", body: "Deployment, handover and a working product in your hands." },
+  { title: "Discovery", body: "Map the core problem, users and must-have features. No scope bloat." },
+  { title: "Design", body: "Clickable UI and flows so you see the product before we build it." },
+  { title: "Development", body: "Modern stack, clean code, shipped in milestones — not in a black box." },
+  { title: "Testing", body: "Real-user testing across devices. Bugs fixed before you see them." },
+  { title: "Launch", body: "Deployment, handover and a working product in your hands." },
 ];
 
 const benefits = [
@@ -43,7 +43,7 @@ const faqs = [
   { q: "What exactly is an MVP?", a: "A Minimum Viable Product — the smallest version of your idea that delivers real value to real users so you can validate quickly." },
   { q: "Do I own the code?", a: "Yes. Full code ownership and repository access transferred on completion." },
   { q: "Can it scale once we grow?", a: "Yes. We build on modern frameworks designed to scale from your first user to thousands." },
-  { q: "Do you handle hosting?", a: "We deploy your platform on production-ready infrastructure and walk you through everything." },
+  { q: "Do you handle hosting?", a: "Yes. Hosting is included with any monthly care plan and we walk you through everything at launch." },
   { q: "What if I need changes after launch?", a: "Ongoing development and maintenance packages are available, or we can train your team." },
   { q: "How are payments handled?", a: "50% deposit to start, balance on launch. Clear milestones throughout." },
 ];
@@ -159,15 +159,14 @@ const SaasMvp = () => {
           <div className="border-t border-b" style={{ borderColor: "hsl(var(--rule))" }}>
             {process.map((s, i) => (
               <motion.div
-                key={s.code}
+                key={s.title}
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.45, delay: i * 0.05 }}
-                className="group grid grid-cols-[auto_1fr] items-baseline gap-6 lg:gap-12 py-6 lg:py-8 border-b last:border-b-0"
+                className="group grid grid-cols-[1fr] items-baseline gap-2 py-5 lg:py-6 border-b last:border-b-0"
                 style={{ borderColor: "hsl(var(--border))" }}
               >
-                <span className="drafting-numeral text-muted-foreground group-hover:text-primary transition-colors" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}>{s.code}</span>
                 <div>
                   <h3 className="display text-xl lg:text-2xl font-medium mb-1">{s.title}</h3>
                   <p className="text-muted-foreground max-w-2xl">{s.body}</p>

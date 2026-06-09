@@ -184,7 +184,7 @@ const Contact = () => {
               { q: "How long does it take to build a website?", a: "Most websites are completed within 5-7 days. Complex projects may take up to 14 days." },
               { q: "Do you offer ongoing support?", a: "Yes! All packages include support ranging from 1-6 months depending on the plan." },
               { q: "Can you help with existing websites?", a: "Absolutely. We can redesign, optimize, or add new features to your current website." },
-              { q: "What's included in custom web applications?", a: "Full application development, user management, payment integration, and hosting setup." },
+              { q: "What's included in custom web applications?", a: "Full application development, user management, payment integration, and hosting setup. Hosting is included with any monthly care plan." },
             ].map((faq, index) => (
               <motion.div key={index} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={index}
                 className="p-6 rounded-2xl border border-border/30 hover:border-primary/20 transition-all duration-500"

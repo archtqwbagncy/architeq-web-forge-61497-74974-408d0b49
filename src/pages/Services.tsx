@@ -12,7 +12,7 @@ const Services = () => {
     { title: "SaaS & MVP Development", description: "Launch your software platform in weeks", features: ["Booking systems", "Customer portals", "Dashboards", "Scalable foundations"], startingPrice: "R24,999+", link: "/services/saas-mvp", icon: <Zap className="h-6 w-6" /> },
     { title: "Custom Software Development", description: "Software built around your business workflows", features: ["Internal tools", "Automation", "Custom dashboards", "Long-term scalability"], startingPrice: "R34,999+", link: "/services/custom-software", icon: <Settings className="h-6 w-6" /> },
     { title: "Google Business Profile", description: "Get found on Google Maps & Search", features: ["Profile Setup & Optimization", "Google Maps Listing", "Review Management", "Local SEO Boost"], startingPrice: "R749+", link: "/contact", icon: <Zap className="h-6 w-6" /> },
-    { title: "Website Maintenance", description: "Keep your website running smoothly", features: ["Security Updates", "Bug Fixes", "Performance Monitoring", "Content Updates"], startingPrice: "R299+/month", link: "/contact", icon: <Settings className="h-6 w-6" /> },
+    { title: "Website Care & Hosting", description: "Hosting plus everything needed to keep your site running smoothly", features: ["Hosting included", "Security updates", "Bug fixes", "Performance monitoring", "Content updates"], startingPrice: "R299+/month", link: "/contact", icon: <Settings className="h-6 w-6" /> },
   ];
 
   return (
@@ -128,14 +128,14 @@ const Services = () => {
       <section className="py-14 lg:py-20 border-t border-border/30">
         <div className="container mx-auto px-6 lg:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Website Maintenance Packages</h2>
-            <p className="text-lg text-muted-foreground">Keep your website running smoothly</p>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Website Care & Hosting Packages</h2>
+            <p className="text-lg text-muted-foreground">Hosting included — we keep your site fast, safe and up to date</p>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
-              { name: "Basic", price: "R299+/month", features: ["Security Updates", "Monthly Backups", "Bug Fixes", "Email Support"] },
-              { name: "Standard", price: "R499+/month", popular: true, features: ["Everything in Basic", "Content Updates", "Performance Monitoring", "Priority Support", "Weekly Backups"] },
-              { name: "Premium", price: "R699+/month", features: ["Everything in Standard", "SEO Monitoring", "Analytics Reports", "24/7 Support", "Daily Backups", "Feature Enhancements"] },
+              { name: "Basic", price: "R299+/month", features: ["Hosting included", "Security updates", "Monthly backups", "Bug fixes", "Email support"] },
+              { name: "Standard", price: "R499+/month", popular: true, features: ["Everything in Basic", "Content updates", "Performance monitoring", "Priority support", "Weekly backups"] },
+              { name: "Premium", price: "R699+/month", features: ["Everything in Standard", "SEO monitoring", "Analytics reports", "24/7 support", "Daily backups", "Feature enhancements"] },
             ].map((pkg, index) => (
               <motion.div key={index} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={index}
                 className={`relative p-6 rounded-3xl border transition-all duration-500 ${pkg.popular ? "border-primary ring-1 ring-primary/20 bg-primary/[0.03]" : "border-border/30 hover:border-primary/20"}`}

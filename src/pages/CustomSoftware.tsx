@@ -24,11 +24,11 @@ const packages = [
 ];
 
 const process = [
-  { code: "01", title: "Consultation", body: "We learn your business, workflows and what's slowing you down." },
-  { code: "02", title: "Planning", body: "Architecture, feature scope and milestones agreed before a line of code." },
-  { code: "03", title: "Development", body: "Built in iterations you can see, with regular check-ins — not silence." },
-  { code: "04", title: "Testing", body: "End-to-end QA across roles, devices and edge cases." },
-  { code: "05", title: "Deployment", body: "Production rollout, team training and handover documentation." },
+  { title: "Consultation", body: "We learn your business, workflows and what's slowing you down." },
+  { title: "Planning", body: "Architecture, feature scope and milestones agreed before a line of code." },
+  { title: "Development", body: "Built in iterations you can see, with regular check-ins — not silence." },
+  { title: "Testing", body: "End-to-end QA across roles, devices and edge cases." },
+  { title: "Deployment", body: "Production rollout, team training and handover documentation." },
 ];
 
 const benefits = [
@@ -189,15 +189,14 @@ const CustomSoftware = () => {
           <div className="border-t border-b" style={{ borderColor: "hsl(var(--rule))" }}>
             {process.map((s, i) => (
               <motion.div
-                key={s.code}
+                key={s.title}
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.45, delay: i * 0.05 }}
-                className="group grid grid-cols-[auto_1fr] items-baseline gap-6 lg:gap-12 py-6 lg:py-8 border-b last:border-b-0"
+                className="group grid grid-cols-[1fr] items-baseline gap-2 py-5 lg:py-6 border-b last:border-b-0"
                 style={{ borderColor: "hsl(var(--border))" }}
               >
-                <span className="drafting-numeral text-muted-foreground group-hover:text-primary transition-colors" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}>{s.code}</span>
                 <div>
                   <h3 className="display text-xl lg:text-2xl font-medium mb-1">{s.title}</h3>
                   <p className="text-muted-foreground max-w-2xl">{s.body}</p>

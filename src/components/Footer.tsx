@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Instagram, Linkedin, Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -64,6 +64,16 @@ const Footer = () => {
                 style={{ borderColor: "hsl(var(--rule))" }}
               >
                 <Instagram className="h-4 w-4" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/architeqwebagency/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="p-2 border hover:bg-foreground hover:text-background transition-colors"
+                style={{ borderColor: "hsl(var(--rule))" }}
+              >
+                <Linkedin className="h-4 w-4" />
               </a>
               <a
                 href="https://wa.me/27694900189"
