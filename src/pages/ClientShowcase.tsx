@@ -27,7 +27,7 @@ const ClientShowcase = () => {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-28 lg:py-40 overflow-hidden">
+      <section className="relative py-14 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 right-[20%] w-[500px] h-[500px] bg-primary/8 rounded-full blur-[120px]" />
         </div>
@@ -68,7 +68,7 @@ const ClientShowcase = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 lg:py-36 border-t border-border/30">
+      <section className="py-14 lg:py-20 border-t border-border/30">
         <div className="container mx-auto px-6 lg:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
             <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4 block">See from our clients</span>

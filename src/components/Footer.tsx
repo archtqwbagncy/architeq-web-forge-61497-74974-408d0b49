@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-background border-t" style={{ borderColor: "hsl(var(--rule))" }}>
       {/* Closing CTA */}
-      <section className="px-6 lg:px-10 pt-16 lg:pt-24 pb-16">
+      <section className="px-6 lg:px-10 pt-8 lg:pt-12 pb-16">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center justify-between mb-8">
             <span className="plate-label">Get a fixed 7-day quote</span>

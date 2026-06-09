@@ -43,7 +43,7 @@ const CustomEmail = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* HERO */}
-      <section className="relative px-6 lg:px-10 pt-16 lg:pt-24 pb-20 lg:pb-28 overflow-hidden">
+      <section className="relative px-6 lg:px-10 pt-8 lg:pt-12 pb-14 lg:pb-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 right-[10%] w-[500px] h-[500px] bg-primary/8 rounded-full blur-[120px]" />
         </div>
@@ -88,7 +88,7 @@ const CustomEmail = () => {
       <div className="rule" />
 
       {/* WHAT WE DO */}
-      <section className="px-6 lg:px-10 py-20 lg:py-28">
+      <section className="px-6 lg:px-10 py-14 lg:py-20">
         <div className="mx-auto max-w-7xl grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20">
           <div>
             <span className="plate-label mb-4 block">What we do for you</span>
@@ -117,7 +117,7 @@ const CustomEmail = () => {
       <div className="rule" />
 
       {/* PACKAGES */}
-      <section id="packages" className="px-6 lg:px-10 py-20 lg:py-28">
+      <section id="packages" className="px-6 lg:px-10 py-14 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
             <div>
@@ -165,7 +165,7 @@ const CustomEmail = () => {
       <div className="rule" />
 
       {/* WHY IT MATTERS / BENEFITS */}
-      <section className="px-6 lg:px-10 py-20 lg:py-28 bg-muted/30">
+      <section className="px-6 lg:px-10 py-14 lg:py-20 bg-muted/30">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl mb-14">
             <span className="plate-label mb-4 block">Why it matters</span>
@@ -200,7 +200,7 @@ const CustomEmail = () => {
       <div className="rule" />
 
       {/* FAQ */}
-      <section className="px-6 lg:px-10 py-20 lg:py-28">
+      <section className="px-6 lg:px-10 py-14 lg:py-20">
         <div className="mx-auto max-w-5xl">
           <span className="plate-label mb-4 block">FAQ</span>
           <h2 className="display mb-12" style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}>Common questions.</h2>
@@ -225,7 +225,7 @@ const CustomEmail = () => {
       <div className="rule" />
 
       {/* CTA + CONTACT FORM */}
-      <section className="px-6 lg:px-10 py-20 lg:py-28">
+      <section className="px-6 lg:px-10 py-14 lg:py-20">
         <div className="mx-auto max-w-7xl grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-start">
           <div>
             <span className="plate-label mb-4 block">Get started</span>

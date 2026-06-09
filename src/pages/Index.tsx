@@ -54,7 +54,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* ============ HERO ============ */}
-      <section className="relative px-6 lg:px-10 pt-10 lg:pt-16 pb-20 lg:pb-28 overflow-hidden">
+      <section className="relative px-6 lg:px-10 pt-8 lg:pt-12 pb-14 lg:pb-20 overflow-hidden">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center justify-between mb-10 lg:mb-14">
             <span className="plate-label">Live in 7 days — fixed price</span>
@@ -147,7 +147,7 @@ const Index = () => {
       </section>
 
       {/* ============ SERVICES ============ */}
-      <section className="px-6 lg:px-10 py-20 lg:py-32">
+      <section className="px-6 lg:px-10 py-14 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-end justify-between mb-12 lg:mb-20">
             <div>
@@ -193,7 +193,7 @@ const Index = () => {
       <div className="rule" />
 
       {/* ============ NEW SERVICES ============ */}
-      <section className="px-6 lg:px-10 py-20 lg:py-32 bg-muted/30">
+      <section className="px-6 lg:px-10 py-14 lg:py-20 bg-muted/30">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-16">
             <div>
@@ -250,7 +250,7 @@ const Index = () => {
       <div className="rule" />
 
       {/* ============ USP — IDEA TO LAUNCH ============ */}
-      <section className="px-6 lg:px-10 py-20 lg:py-32">
+      <section className="px-6 lg:px-10 py-14 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-20 items-start mb-14 lg:mb-20">
             <div>
@@ -293,7 +293,7 @@ const Index = () => {
 
 
       {/* ============ NUMBERS / PROOF ============ */}
-      <section className="px-6 lg:px-10 py-16 lg:py-24">
+      <section className="px-6 lg:px-10 py-12 lg:py-16">
         <div className="mx-auto max-w-7xl grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6">
           {[
             { n: "50+", l: "Projects shipped" },
@@ -320,7 +320,7 @@ const Index = () => {
       <div className="rule" />
 
       {/* ============ PORTFOLIO ============ */}
-      <section className="px-6 lg:px-10 py-20 lg:py-32">
+      <section className="px-6 lg:px-10 py-14 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-end justify-between mb-12">
             <div>
@@ -374,7 +374,7 @@ const Index = () => {
       <div className="rule" />
 
       {/* ============ TESTIMONIALS ============ */}
-      <section className="px-6 lg:px-10 py-20 lg:py-32 bg-foreground text-background">
+      <section className="px-6 lg:px-10 py-14 lg:py-20 bg-foreground text-background">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center justify-between mb-16">
             <span className="plate-label" style={{ color: "hsl(var(--background))" }}>
@@ -416,7 +416,7 @@ const Index = () => {
       </section>
 
       {/* ============ PACKAGES ============ */}
-      <section className="px-6 lg:px-10 py-20 lg:py-32">
+      <section className="px-6 lg:px-10 py-14 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-16">
             <div>
