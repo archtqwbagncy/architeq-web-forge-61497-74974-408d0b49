@@ -5,42 +5,16 @@ import { Phone, Star, Check, Mail, Rocket, Cpu, ArrowUpRight, Gauge, Milestone, 
 
 const Index = () => {
   const services = [
-    { code: "01", title: "Lead-gen websites", line: "Phone-first layouts engineered to turn searches into booked jobs." },
-    { code: "02", title: "Google Business setup", line: "Rank in the local 3-pack. Reviews, photos, service areas — handled." },
-    { code: "03", title: "Quote & booking forms", line: "Capture the right details upfront so you can quote without phone tag." },
-    { code: "04", title: "Maintenance & speed", line: "Always on, always fast. We watch the site so you can stay on the job." },
-  ];
-
-  const industries = [
-    "Roofing", "HVAC", "Electrical", "Plumbing", "Construction", "Landscaping",
-    "Painting", "Renovations", "Solar", "Cleaning", "Accounting", "Pest Control",
-    "Security", "Auto Repair", "Movers", "Locksmiths",
-  ];
-
-  const projects = [
-    { name: "Lumavu Trading", image: "/portfolio/lumavu-trading.png", category: "Construction", plate: "PR-002" },
-    { name: "H & N House of Beauty", image: "/portfolio/hn-house-of-beauty.png", category: "Local Services", plate: "PR-001" },
-    { name: "Netshifhefhe Attorneys", image: "/portfolio/netshifhefhe-attorneys.png", category: "Legal", plate: "PR-003" },
-    { name: "Home of Accounting", image: "/portfolio/hac-accounting.png", category: "Finance", plate: "PR-004" },
-  ];
-
-  const testimonials = [
-    { quote: "Phone hasn't stopped ringing since the new site went live. Booked out three weeks ahead.", author: "H & N House of Beauty" },
-    { quote: "They built our first site three years ago and our new one now. Seamless, always a call away.", author: "Kebogile Mokgoebo" },
-    { quote: "Best web agency I can recommend. Service was tip-top and the outcome speaks for itself.", author: "Philly Jaroam" },
-  ];
-
-  const packages = [
-    { name: "Essential",    price: "1 999+",  days: "2",  pages: "1 page",     lines: ["One-page site", "Mobile-first", "Click-to-call", "Google Business"] },
-    { name: "Starter",      price: "4 999+",  days: "4",  pages: "Up to 5",    lines: ["5 pages", "Service area map", "Quote form", "Reviews block"] },
-    { name: "Professional", price: "9 999+",  days: "7",  pages: "Up to 10",   lines: ["10 pages + blog", "Local SEO setup", "Lead routing", "Booking-ready"], popular: true },
-    { name: "Enterprise",   price: "14 999+", days: "10", pages: "15+ pages",  lines: ["Unlimited pages", "Analytics + tracking", "Priority support", "Custom features"] },
+    { title: "Websites that bring in leads", line: "Built for phones first, designed to turn searches into booked jobs." },
+    { title: "Google Business setup", line: "Get found on Google Maps. Reviews, photos and service areas sorted for you." },
+    { title: "Quote and booking forms", line: "Capture the right details upfront so you can quote without phone tag." },
+    { title: "Website care and hosting", line: "We host your site, keep it fast, secure and up to date — all in one monthly plan." },
   ];
 
   const newServices = [
-    { icon: <Mail className="h-6 w-6" />, code: "NS-01", title: "Custom Email Services", body: "Branded business email setup with Gmail integration. Zero monthly cost, live in under 24 hours.", price: "From R499+", timeline: "< 24 hours", cta: "Get Professional Email", href: "/services/custom-email" },
-    { icon: <Rocket className="h-6 w-6" />, code: "NS-02", title: "SaaS & MVP Development", body: "Turn your business idea into a working online platform — booking systems, portals, dashboards, subscription products.", price: "From R24 999+", timeline: "2–4 weeks", cta: "Build My Platform", href: "/services/saas-mvp" },
-    { icon: <Cpu className="h-6 w-6" />, code: "NS-03", title: "Custom Software Development", body: "Custom software built around your business goals, processes and workflows. Internal tools, automation, full platforms.", price: "From R34 999+", timeline: "3–6 weeks", cta: "Get A Software Quote", href: "/services/custom-software" },
+    { icon: <Mail className="h-6 w-6" />, title: "Custom Email Services", body: "Branded business email setup with Gmail integration. Zero monthly cost, live in under 24 hours.", price: "From R499+", timeline: "< 24 hours", cta: "Get Professional Email", href: "/services/custom-email" },
+    { icon: <Rocket className="h-6 w-6" />, title: "SaaS & MVP Development", body: "Turn your business idea into a working online platform — booking systems, portals, dashboards, subscription products.", price: "From R24 999+", timeline: "2–4 weeks", cta: "Build My Platform", href: "/services/saas-mvp" },
+    { icon: <Cpu className="h-6 w-6" />, title: "Custom Software Development", body: "Custom software built around your business goals, processes and workflows. Internal tools, automation, full platforms.", price: "From R34 999+", timeline: "3–6 weeks", cta: "Get A Software Quote", href: "/services/custom-software" },
   ];
 
   const usp = [
@@ -153,9 +127,9 @@ const Index = () => {
             <div>
               <span className="plate-label mb-4 block">What we build</span>
               <h2 className="display max-w-3xl" style={{ fontSize: "clamp(2rem, 5vw, 4.5rem)" }}>
-                Four sharp tools.
+                Simple tools.
                 <br />
-                <span className="text-muted-foreground">No bloat, no filler.</span>
+                <span className="text-muted-foreground">Built to bring in work.</span>
               </h2>
             </div>
             <Link to="/services" className="hidden md:inline-flex btn-ghost-line text-sm">
@@ -166,17 +140,14 @@ const Index = () => {
           <div>
             {services.map((s, i) => (
               <motion.div
-                key={s.code}
+                key={s.title}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
-                className="group grid grid-cols-[auto_1fr_auto] items-baseline gap-6 lg:gap-12 py-7 lg:py-10 border-t last:border-b transition-colors"
+                className="group grid grid-cols-[1fr_auto] items-baseline gap-6 lg:gap-12 py-6 lg:py-8 border-t last:border-b transition-colors"
                 style={{ borderColor: "hsl(var(--rule))" }}
               >
-                <span className="drafting-numeral text-muted-foreground group-hover:text-primary transition-colors" style={{ fontSize: "clamp(2.5rem, 4vw, 4rem)" }}>
-                  {s.code}
-                </span>
                 <div>
                   <h3 className="display text-2xl lg:text-4xl font-medium mb-2">{s.title}</h3>
                   <p className="text-muted-foreground text-base lg:text-lg max-w-2xl leading-relaxed">{s.line}</p>
@@ -212,18 +183,17 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-5">
             {newServices.map((s, i) => (
               <motion.div
-                key={s.code}
+                key={s.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.55, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
                 className="group relative p-7 lg:p-8 rounded-3xl border border-border/40 bg-background hover:border-primary/40 hover:-translate-y-1.5 hover:shadow-xl transition-all duration-500 flex flex-col"
               >
-                <div className="flex items-start justify-between mb-6">
+                <div className="flex items-start mb-6">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                     {s.icon}
                   </div>
-                  <span className="tabular text-[10px] tracking-[0.18em] uppercase text-muted-foreground font-semibold">{s.code}</span>
                 </div>
                 <h3 className="display text-2xl font-medium mb-3">{s.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">{s.body}</p>
@@ -428,7 +398,7 @@ const Index = () => {
               </h2>
             </div>
             <p className="text-muted-foreground max-w-sm">
-              All packages billed in ZAR. 50% deposit, balance on launch. Hosting and one revision round included.
+              All packages billed in ZAR. 50% deposit, balance on launch. One revision round included. Hosting is included with any monthly website care plan.
             </p>
           </div>
 

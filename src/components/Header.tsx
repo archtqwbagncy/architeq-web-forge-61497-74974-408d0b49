@@ -18,11 +18,11 @@ const Header = () => {
   }, []);
 
   const nav = [
-    { name: "Services", href: "/services", code: "01" },
-    { name: "Portfolio", href: "/portfolio", code: "02" },
-    { name: "Clients", href: "/clients", code: "03" },
-    { name: "About", href: "/about", code: "04" },
-    { name: "Contact", href: "/contact", code: "05" },
+    { name: "Services", href: "/services" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Clients", href: "/clients" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const serviceItems = [
@@ -74,7 +74,6 @@ const Header = () => {
                     isActive(item.href) || (isServices && location.pathname.startsWith("/services")) ? "text-foreground" : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
-                  <span className="tabular text-[9px] tracking-[0.2em] mr-1.5 opacity-50 group-hover/link:opacity-100 transition-opacity">{item.code}</span>
                   {item.name}
                   {(isActive(item.href) || (isServices && location.pathname.startsWith("/services"))) && (
                     <span className="absolute -bottom-[1px] left-3 right-3 h-[2px] bg-primary" />
@@ -150,7 +149,6 @@ const Header = () => {
                     style={{ borderColor: "hsl(var(--border))" }}
                   >
                     <span className="display text-2xl font-medium">{item.name}</span>
-                    <span className="tabular text-[10px] tracking-[0.2em] text-muted-foreground">{item.code}</span>
                   </Link>
                   {item.name === "Services" && (
                     <div className="pl-4 py-2 flex flex-col border-b" style={{ borderColor: "hsl(var(--border))" }}>
