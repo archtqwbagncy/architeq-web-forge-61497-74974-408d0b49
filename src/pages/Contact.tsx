@@ -65,7 +65,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-28 lg:py-40 overflow-hidden">
+      <section className="relative py-14 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 right-[20%] w-[500px] h-[500px] bg-primary/8 rounded-full blur-[120px]" />
         </div>
@@ -85,7 +85,7 @@ const Contact = () => {
       </section>
 
       {/* Form & Info */}
-      <section className="py-24 lg:py-36 border-t border-border/30">
+      <section className="py-14 lg:py-20 border-t border-border/30">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
             {/* Form */}
@@ -174,7 +174,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 lg:py-36 border-t border-border/30">
+      <section className="py-14 lg:py-20 border-t border-border/30">
         <div className="container mx-auto px-6 lg:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Frequently Asked Questions</h2>
@@ -184,7 +184,7 @@ const Contact = () => {
               { q: "How long does it take to build a website?", a: "Most websites are completed within 5-7 days. Complex projects may take up to 14 days." },
               { q: "Do you offer ongoing support?", a: "Yes! All packages include support ranging from 1-6 months depending on the plan." },
               { q: "Can you help with existing websites?", a: "Absolutely. We can redesign, optimize, or add new features to your current website." },
-              { q: "What's included in custom web applications?", a: "Full application development, user management, payment integration, and hosting setup." },
+              { q: "What's included in custom web applications?", a: "Full application development, user management, payment integration, and hosting setup. Hosting is included with any monthly care plan." },
             ].map((faq, index) => (
               <motion.div key={index} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={index}
                 className="p-6 rounded-2xl border border-border/30 hover:border-primary/20 transition-all duration-500"

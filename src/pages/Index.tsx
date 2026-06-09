@@ -5,10 +5,10 @@ import { Phone, Star, Check, Mail, Rocket, Cpu, ArrowUpRight, Gauge, Milestone, 
 
 const Index = () => {
   const services = [
-    { code: "01", title: "Lead-gen websites", line: "Phone-first layouts engineered to turn searches into booked jobs." },
-    { code: "02", title: "Google Business setup", line: "Rank in the local 3-pack. Reviews, photos, service areas — handled." },
-    { code: "03", title: "Quote & booking forms", line: "Capture the right details upfront so you can quote without phone tag." },
-    { code: "04", title: "Maintenance & speed", line: "Always on, always fast. We watch the site so you can stay on the job." },
+    { title: "Websites that bring in leads", line: "Built for phones first, designed to turn searches into booked jobs." },
+    { title: "Google Business setup", line: "Get found on Google Maps. Reviews, photos and service areas sorted for you." },
+    { title: "Quote and booking forms", line: "Capture the right details upfront so you can quote without phone tag." },
+    { title: "Website care and hosting", line: "We host your site, keep it fast, secure and up to date — all in one monthly plan." },
   ];
 
   const industries = [
@@ -38,9 +38,9 @@ const Index = () => {
   ];
 
   const newServices = [
-    { icon: <Mail className="h-6 w-6" />, code: "NS-01", title: "Custom Email Services", body: "Branded business email setup with Gmail integration. Zero monthly cost, live in under 24 hours.", price: "From R499+", timeline: "< 24 hours", cta: "Get Professional Email", href: "/services/custom-email" },
-    { icon: <Rocket className="h-6 w-6" />, code: "NS-02", title: "SaaS & MVP Development", body: "Turn your business idea into a working online platform — booking systems, portals, dashboards, subscription products.", price: "From R24 999+", timeline: "2–4 weeks", cta: "Build My Platform", href: "/services/saas-mvp" },
-    { icon: <Cpu className="h-6 w-6" />, code: "NS-03", title: "Custom Software Development", body: "Custom software built around your business goals, processes and workflows. Internal tools, automation, full platforms.", price: "From R34 999+", timeline: "3–6 weeks", cta: "Get A Software Quote", href: "/services/custom-software" },
+    { icon: <Mail className="h-6 w-6" />, title: "Custom Email Services", body: "Branded business email setup with Gmail integration. Zero monthly cost, live in under 24 hours.", price: "From R499+", timeline: "< 24 hours", cta: "Get Professional Email", href: "/services/custom-email" },
+    { icon: <Rocket className="h-6 w-6" />, title: "SaaS & MVP Development", body: "Turn your business idea into a working online platform — booking systems, portals, dashboards, subscription products.", price: "From R24 999+", timeline: "2–4 weeks", cta: "Build My Platform", href: "/services/saas-mvp" },
+    { icon: <Cpu className="h-6 w-6" />, title: "Custom Software Development", body: "Custom software built around your business goals, processes and workflows. Internal tools, automation, full platforms.", price: "From R34 999+", timeline: "3–6 weeks", cta: "Get A Software Quote", href: "/services/custom-software" },
   ];
 
   const usp = [
@@ -54,7 +54,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* ============ HERO ============ */}
-      <section className="relative px-6 lg:px-10 pt-10 lg:pt-16 pb-20 lg:pb-28 overflow-hidden">
+      <section className="relative px-6 lg:px-10 pt-8 lg:pt-12 pb-14 lg:pb-20 overflow-hidden">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center justify-between mb-10 lg:mb-14">
             <span className="plate-label">Live in 7 days — fixed price</span>
@@ -147,15 +147,15 @@ const Index = () => {
       </section>
 
       {/* ============ SERVICES ============ */}
-      <section className="px-6 lg:px-10 py-20 lg:py-32">
+      <section className="px-6 lg:px-10 py-14 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-end justify-between mb-12 lg:mb-20">
             <div>
               <span className="plate-label mb-4 block">What we build</span>
               <h2 className="display max-w-3xl" style={{ fontSize: "clamp(2rem, 5vw, 4.5rem)" }}>
-                Four sharp tools.
+                Simple tools.
                 <br />
-                <span className="text-muted-foreground">No bloat, no filler.</span>
+                <span className="text-muted-foreground">Built to bring in work.</span>
               </h2>
             </div>
             <Link to="/services" className="hidden md:inline-flex btn-ghost-line text-sm">
@@ -166,17 +166,14 @@ const Index = () => {
           <div>
             {services.map((s, i) => (
               <motion.div
-                key={s.code}
+                key={s.title}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
-                className="group grid grid-cols-[auto_1fr_auto] items-baseline gap-6 lg:gap-12 py-7 lg:py-10 border-t last:border-b transition-colors"
+                className="group grid grid-cols-[1fr_auto] items-baseline gap-6 lg:gap-12 py-6 lg:py-8 border-t last:border-b transition-colors"
                 style={{ borderColor: "hsl(var(--rule))" }}
               >
-                <span className="drafting-numeral text-muted-foreground group-hover:text-primary transition-colors" style={{ fontSize: "clamp(2.5rem, 4vw, 4rem)" }}>
-                  {s.code}
-                </span>
                 <div>
                   <h3 className="display text-2xl lg:text-4xl font-medium mb-2">{s.title}</h3>
                   <p className="text-muted-foreground text-base lg:text-lg max-w-2xl leading-relaxed">{s.line}</p>
@@ -193,7 +190,7 @@ const Index = () => {
       <div className="rule" />
 
       {/* ============ NEW SERVICES ============ */}
-      <section className="px-6 lg:px-10 py-20 lg:py-32 bg-muted/30">
+      <section className="px-6 lg:px-10 py-14 lg:py-20 bg-muted/30">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-16">
             <div>
@@ -212,18 +209,17 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-5">
             {newServices.map((s, i) => (
               <motion.div
-                key={s.code}
+                key={s.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.55, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
                 className="group relative p-7 lg:p-8 rounded-3xl border border-border/40 bg-background hover:border-primary/40 hover:-translate-y-1.5 hover:shadow-xl transition-all duration-500 flex flex-col"
               >
-                <div className="flex items-start justify-between mb-6">
+                <div className="flex items-start mb-6">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                     {s.icon}
                   </div>
-                  <span className="tabular text-[10px] tracking-[0.18em] uppercase text-muted-foreground font-semibold">{s.code}</span>
                 </div>
                 <h3 className="display text-2xl font-medium mb-3">{s.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">{s.body}</p>
@@ -250,7 +246,7 @@ const Index = () => {
       <div className="rule" />
 
       {/* ============ USP — IDEA TO LAUNCH ============ */}
-      <section className="px-6 lg:px-10 py-20 lg:py-32">
+      <section className="px-6 lg:px-10 py-14 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-20 items-start mb-14 lg:mb-20">
             <div>
@@ -293,7 +289,7 @@ const Index = () => {
 
 
       {/* ============ NUMBERS / PROOF ============ */}
-      <section className="px-6 lg:px-10 py-16 lg:py-24">
+      <section className="px-6 lg:px-10 py-12 lg:py-16">
         <div className="mx-auto max-w-7xl grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6">
           {[
             { n: "50+", l: "Projects shipped" },
@@ -320,7 +316,7 @@ const Index = () => {
       <div className="rule" />
 
       {/* ============ PORTFOLIO ============ */}
-      <section className="px-6 lg:px-10 py-20 lg:py-32">
+      <section className="px-6 lg:px-10 py-14 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-end justify-between mb-12">
             <div>
@@ -374,7 +370,7 @@ const Index = () => {
       <div className="rule" />
 
       {/* ============ TESTIMONIALS ============ */}
-      <section className="px-6 lg:px-10 py-20 lg:py-32 bg-foreground text-background">
+      <section className="px-6 lg:px-10 py-14 lg:py-20 bg-foreground text-background">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center justify-between mb-16">
             <span className="plate-label" style={{ color: "hsl(var(--background))" }}>
@@ -416,7 +412,7 @@ const Index = () => {
       </section>
 
       {/* ============ PACKAGES ============ */}
-      <section className="px-6 lg:px-10 py-20 lg:py-32">
+      <section className="px-6 lg:px-10 py-14 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-16">
             <div>
@@ -428,7 +424,7 @@ const Index = () => {
               </h2>
             </div>
             <p className="text-muted-foreground max-w-sm">
-              All packages billed in ZAR. 50% deposit, balance on launch. Hosting and one revision round included.
+              All packages billed in ZAR. 50% deposit, balance on launch. One revision round included. Hosting is included with any monthly website care plan.
             </p>
           </div>
 
@@ -444,7 +440,6 @@ const Index = () => {
                 style={{ borderColor: "hsl(var(--border))" }}
               >
                 <div className="col-span-12 lg:col-span-3 flex items-baseline gap-3 flex-wrap">
-                  <span className="tabular text-xs text-muted-foreground tracking-[0.16em] uppercase font-semibold">0{i + 1}</span>
                   <h3 className="display text-2xl lg:text-3xl font-medium">{p.name}</h3>
                   {p.popular && (
                     <span className="key text-primary border-primary">Most picked</span>

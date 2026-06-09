@@ -23,7 +23,7 @@ const WebDesign = () => {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-28 lg:py-40 overflow-hidden">
+      <section className="relative py-14 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 right-[20%] w-[500px] h-[500px] bg-primary/8 rounded-full blur-[120px]" />
         </div>
@@ -55,7 +55,7 @@ const WebDesign = () => {
       </section>
 
       {/* Packages */}
-      <section className="py-24 lg:py-36 border-t border-border/30">
+      <section className="py-14 lg:py-20 border-t border-border/30">
         <div className="container mx-auto px-6 lg:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Choose Your Perfect Package</h2>
@@ -92,18 +92,18 @@ const WebDesign = () => {
       </section>
 
       {/* Web Support */}
-      <section className="py-24 lg:py-36 border-t border-border/30">
+      <section className="py-14 lg:py-20 border-t border-border/30">
         <div className="container mx-auto px-6 lg:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Ongoing Web Support</h2>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Website Care & Hosting</h2>
             <span className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-muted/50 px-4 py-1.5 text-xs font-medium text-muted-foreground">
-              <Zap className="h-3.5 w-3.5" /> First Month Free on All Support Packages
+              <Zap className="h-3.5 w-3.5" /> Hosting included with every care plan
             </span>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
             {[
-              { name: "Essential Support", price: "R299+/month", features: ["Monthly security updates", "Basic bug fixes", "Performance monitoring", "Email support", "Monthly backup"] },
-              { name: "Premium Support", price: "R499+/month", popular: true, features: ["Weekly security updates", "Priority bug fixes", "Advanced optimization", "Phone & email support", "Weekly backup", "Content updates", "SEO monitoring"] },
+              { name: "Essential Care", price: "R299+/month", features: ["Hosting included", "Monthly security updates", "Basic bug fixes", "Performance monitoring", "Email support", "Monthly backup"] },
+              { name: "Premium Care", price: "R499+/month", popular: true, features: ["Hosting included", "Weekly security updates", "Priority bug fixes", "Advanced optimisation", "Phone & email support", "Weekly backup", "Content updates", "SEO monitoring"] },
             ].map((pkg, index) => (
               <motion.div key={index} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={index}
                 className={`relative p-8 rounded-3xl border transition-all duration-500 ${pkg.popular ? "border-primary ring-1 ring-primary/20 bg-primary/[0.03]" : "border-border/30 hover:border-primary/20"}`}
@@ -129,7 +129,7 @@ const WebDesign = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 lg:py-36 border-t border-border/30">
+      <section className="py-14 lg:py-20 border-t border-border/30">
         <div className="container mx-auto px-6 lg:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Why Choose Architeq?</h2>

@@ -22,7 +22,7 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-28 lg:py-40 overflow-hidden">
+      <section className="relative py-14 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 right-[20%] w-[500px] h-[500px] bg-primary/8 rounded-full blur-[120px]" />
         </div>
@@ -45,7 +45,7 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-24 lg:py-36 border-t border-border/30">
+      <section className="py-14 lg:py-20 border-t border-border/30">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
             {projects.map((project, index) => (
