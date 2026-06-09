@@ -440,7 +440,6 @@ const Index = () => {
                 style={{ borderColor: "hsl(var(--border))" }}
               >
                 <div className="col-span-12 lg:col-span-3 flex items-baseline gap-3 flex-wrap">
-                  <span className="tabular text-xs text-muted-foreground tracking-[0.16em] uppercase font-semibold">0{i + 1}</span>
                   <h3 className="display text-2xl lg:text-3xl font-medium">{p.name}</h3>
                   {p.popular && (
                     <span className="key text-primary border-primary">Most picked</span>
