@@ -11,6 +11,32 @@ const Index = () => {
     { title: "Website care and hosting", line: "We host your site, keep it fast, secure and up to date — all in one monthly plan." },
   ];
 
+  const industries = [
+    "Roofing", "HVAC", "Electrical", "Plumbing", "Construction", "Landscaping",
+    "Painting", "Renovations", "Solar", "Cleaning", "Accounting", "Pest Control",
+    "Security", "Auto Repair", "Movers", "Locksmiths",
+  ];
+
+  const projects = [
+    { name: "Lumavu Trading", image: "/portfolio/lumavu-trading.png", category: "Construction", plate: "PR-002" },
+    { name: "H & N House of Beauty", image: "/portfolio/hn-house-of-beauty.png", category: "Local Services", plate: "PR-001" },
+    { name: "Netshifhefhe Attorneys", image: "/portfolio/netshifhefhe-attorneys.png", category: "Legal", plate: "PR-003" },
+    { name: "Home of Accounting", image: "/portfolio/hac-accounting.png", category: "Finance", plate: "PR-004" },
+  ];
+
+  const testimonials = [
+    { quote: "Phone hasn't stopped ringing since the new site went live. Booked out three weeks ahead.", author: "H & N House of Beauty" },
+    { quote: "They built our first site three years ago and our new one now. Seamless, always a call away.", author: "Kebogile Mokgoebo" },
+    { quote: "Best web agency I can recommend. Service was tip-top and the outcome speaks for itself.", author: "Philly Jaroam" },
+  ];
+
+  const packages = [
+    { name: "Essential",    price: "1 999+",  days: "2",  pages: "1 page",     lines: ["One-page site", "Mobile-first", "Click-to-call", "Google Business"] },
+    { name: "Starter",      price: "4 999+",  days: "4",  pages: "Up to 5",    lines: ["5 pages", "Service area map", "Quote form", "Reviews block"] },
+    { name: "Professional", price: "9 999+",  days: "7",  pages: "Up to 10",   lines: ["10 pages + blog", "Local SEO setup", "Lead routing", "Booking-ready"], popular: true },
+    { name: "Enterprise",   price: "14 999+", days: "10", pages: "15+ pages",  lines: ["Unlimited pages", "Analytics + tracking", "Priority support", "Custom features"] },
+  ];
+
   const newServices = [
     { icon: <Mail className="h-6 w-6" />, title: "Custom Email Services", body: "Branded business email setup with Gmail integration. Zero monthly cost, live in under 24 hours.", price: "From R499+", timeline: "< 24 hours", cta: "Get Professional Email", href: "/services/custom-email" },
     { icon: <Rocket className="h-6 w-6" />, title: "SaaS & MVP Development", body: "Turn your business idea into a working online platform — booking systems, portals, dashboards, subscription products.", price: "From R24 999+", timeline: "2–4 weeks", cta: "Build My Platform", href: "/services/saas-mvp" },
