@@ -75,7 +75,7 @@ const Services = () => {
                   ))}
                 </ul>
                 <Button className="w-full rounded-full h-11 text-sm font-medium gap-2" asChild>
-                  <Link to={service.link}>Learn More <ArrowRight className="h-4 w-4" /></Link>
+                  <Link to={service.link} aria-label={`Explore ${service.title}`}>Explore {service.title} <ArrowRight className="h-4 w-4" /></Link>
                 </Button>
               </motion.div>
             ))}

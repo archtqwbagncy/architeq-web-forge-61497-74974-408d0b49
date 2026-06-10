@@ -1,0 +1,23 @@
+# Architeq Web Agency
+
+> Gauteng-based web agency building lead-generating websites for South African home-services and local businesses. Fixed-price builds delivered in 7 days (average 5).
+
+Architeq designs and develops websites, custom email setups, SaaS/MVP products, and custom internal software. All starting prices are in ZAR and end in 999+ (e.g. R1,999+, R4,999+). Website care plans start at R299/month and include hosting.
+
+## Pages
+
+- [Home](/): Overview, hero offer, pricing snapshot, and portfolio.
+- [Services](/services): Full catalog with pricing for every service.
+- [Web Design](/services/web-design): 7-day website packages from R1,999+.
+- [Custom Email](/services/custom-email): Branded business email with Gmail, from R499+.
+- [SaaS & MVP Development](/services/saas-mvp): Booking systems, portals, and dashboards from R24,999+.
+- [Custom Software](/services/custom-software): Internal tools, automation, custom dashboards from R34,999+.
+- [Portfolio](/portfolio): Selected client projects with timelines and costs.
+- [Clients](/clients): Client showcase and Google reviews.
+- [About](/about): Who we are and how we work.
+- [Contact](/contact): Quote requests, phone, and email.
+
+## Contact
+
+- Email: admin@architeq.co.za
+- Site: https://architeq.co.za
