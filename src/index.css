@@ -361,3 +361,10 @@ html { scroll-behavior: smooth; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground) / 0.5); }
+
+/* Readable minimum text sizing — override Tailwind's small utilities site-wide */
+:where(.text-xs) { font-size: 0.8125rem; line-height: 1.25rem; }
+:where(.text-sm) { font-size: 0.9375rem; line-height: 1.4rem; }
+:where(.text-\[10px\]) { font-size: 0.75rem !important; line-height: 1.1rem !important; }
+:where(.text-\[11px\]) { font-size: 0.8125rem !important; line-height: 1.15rem !important; }
+:where(.text-\[12px\]) { font-size: 0.8125rem !important; line-height: 1.2rem !important; }
