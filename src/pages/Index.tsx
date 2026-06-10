@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Phone, Star, Check, Mail, Rocket, Cpu, ArrowUpRight, Gauge, Milestone, MessagesSquare, Zap, Target } from "lucide-react";
@@ -53,6 +54,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Architeq · Lead-Gen Websites Live in 7 Days · South Africa" description="Gauteng-based web agency building lead-generating websites for South African businesses. Fixed price, live in 7 days. Starting at R1,999+." path="/" />
       {/* ============ HERO ============ */}
       <section className="relative px-6 lg:px-10 pt-8 lg:pt-12 pb-14 lg:pb-20 overflow-hidden">
         <div className="mx-auto max-w-7xl">

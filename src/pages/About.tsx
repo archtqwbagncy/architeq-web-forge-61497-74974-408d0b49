@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, ArrowRight, Calendar, Users, Settings, Check } from "lucide-react";
@@ -21,6 +22,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="About Architeq · Gauteng Web Agency Building 7-Day Sites" description="Who we are, how we work, and why South African businesses choose Architeq to ship lead-generating websites in a week." path="/about" />
       {/* Hero */}
       <section className="relative py-14 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Check, Mail, ShieldCheck, Zap, Globe, Users, Inbox } from "lucide-react";
@@ -42,6 +43,7 @@ const faqs = [
 const CustomEmail = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Custom Business Email Setup · Gmail-Integrated · From R499+" description="Branded business email on your domain with full Gmail send & receive, DNS configuration, and same-day setup. From R499+." path="/services/custom-email" />
       {/* HERO */}
       <section className="relative px-6 lg:px-10 pt-8 lg:pt-12 pb-14 lg:pb-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

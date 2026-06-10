@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, ArrowRight, Globe, Settings, Zap, Check } from "lucide-react";
@@ -17,6 +18,7 @@ const Services = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="Services · Web, Email, SaaS & Custom Software · Architeq" description="Full catalog: 7-day websites, branded email, SaaS & MVP builds, custom software, Google Business Profile, and hosted website care plans." path="/services" />
       {/* Hero */}
       <section className="relative py-14 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -75,7 +77,7 @@ const Services = () => {
                   ))}
                 </ul>
                 <Button className="w-full rounded-full h-11 text-sm font-medium gap-2" asChild>
-                  <Link to={service.link}>Learn More <ArrowRight className="h-4 w-4" /></Link>
+                  <Link to={service.link} aria-label={`Explore ${service.title}`}>Explore {service.title} <ArrowRight className="h-4 w-4" /></Link>
                 </Button>
               </motion.div>
             ))}

@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
@@ -21,6 +22,7 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="Portfolio · Recent Architeq Client Websites" description="Selected web design and software projects delivered for South African businesses — timelines, costs, and live results." path="/portfolio" />
       {/* Hero */}
       <section className="relative py-14 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

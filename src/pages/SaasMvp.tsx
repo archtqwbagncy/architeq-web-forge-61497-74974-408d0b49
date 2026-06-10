@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Check, Rocket, Smartphone, ShieldCheck, Layers, Sparkles } from "lucide-react";
@@ -51,6 +52,7 @@ const faqs = [
 const SaasMvp = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="SaaS & MVP Development South Africa · From R24,999+" description="Launch your booking system, customer portal, or SaaS MVP in weeks. Scalable foundations, modern stack, fixed-scope pricing from R24,999+." path="/services/saas-mvp" />
       {/* HERO */}
       <section className="relative px-6 lg:px-10 pt-8 lg:pt-12 pb-14 lg:pb-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

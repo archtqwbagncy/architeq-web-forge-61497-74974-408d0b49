@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -64,6 +65,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="Contact Architeq · Request a 7-Day Website Quote" description="Tell us about your project — email, phone, or the quote form. Replies within one business day, Gauteng-based, serving South Africa nationwide." path="/contact" />
       {/* Hero */}
       <section className="relative py-14 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

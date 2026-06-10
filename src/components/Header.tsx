@@ -59,7 +59,7 @@ const Header = () => {
 
       <nav className="px-6 lg:px-10 py-4 lg:py-5 flex items-center justify-between gap-6">
         <Link to="/" className="flex items-center shrink-0">
-          <img src={logoSrc} alt="Architeq" className="h-9 w-auto object-contain" style={{ maxWidth: 180 }} />
+          <img src={logoSrc} alt="Architeq Web Agency logo" className="h-9 w-auto object-contain" style={{ maxWidth: 180 }} />
         </Link>
 
         {/* Desktop nav — flat plate links with numerals */}

@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Check, Cpu, TrendingUp, Workflow, Building2, ShieldCheck } from "lucide-react";
@@ -51,6 +52,7 @@ const faqs = [
 const CustomSoftware = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Custom Software Development · Internal Tools & Automation" description="Custom software built around your workflows — internal tools, automation, dashboards, integrations. From R34,999+." path="/services/custom-software" />
       {/* HERO */}
       <section className="relative px-6 lg:px-10 pt-8 lg:pt-12 pb-14 lg:pb-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
