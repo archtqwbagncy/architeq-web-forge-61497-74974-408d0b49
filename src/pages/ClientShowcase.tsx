@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Star, ArrowUpRight } from "lucide-react";
@@ -26,6 +27,7 @@ const ClientShowcase = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="Clients & 5-Star Google Reviews · Architeq Web Agency" description="See the South African businesses we've built for and read verified 5-star Google reviews from Architeq clients." path="/clients" />
       {/* Hero */}
       <section className="relative py-14 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

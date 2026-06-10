@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Check, Calendar, Users, Settings, Phone, Zap, ArrowUpRight, ArrowRight } from "lucide-react";
@@ -22,6 +23,7 @@ const WebDesign = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO title="Web Design South Africa · 7-Day Websites from R1,999+" description="Fixed-price web design delivered in 7 days. Mobile-responsive, SEO-ready, built to bring in leads. Packages from R1,999+ to R14,999+." path="/services/web-design" />
       {/* Hero */}
       <section className="relative py-14 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
