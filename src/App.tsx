@@ -15,6 +15,7 @@ import SaasMvp from "./pages/SaasMvp";
 import CustomSoftware from "./pages/CustomSoftware";
 import Portfolio from "./pages/Portfolio";
 import ClientShowcase from "./pages/ClientShowcase";
+import BlogWebDesignCost from "./pages/BlogWebDesignCost";
 
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -53,6 +54,7 @@ const App = () => (
                 <Route path="/services/custom-software" element={<CustomSoftware />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/clients" element={<ClientShowcase />} />
+                <Route path="/blog/web-design-cost-south-africa" element={<BlogWebDesignCost />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<NotFound />} />

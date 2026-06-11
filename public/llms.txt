@@ -16,6 +16,8 @@ Architeq designs and develops websites, custom email setups, SaaS/MVP products, 
 - [Clients](/clients): Client showcase and Google reviews.
 - [About](/about): Who we are and how we work.
 - [Contact](/contact): Quote requests, phone, and email.
+- [Web Design Cost in South Africa (2026 Guide)](/blog/web-design-cost-south-africa): Honest pricing breakdown for SA websites.
+
 
 ## Contact
 
