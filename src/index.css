@@ -107,6 +107,11 @@
 
   html {
     -webkit-text-size-adjust: 100%;
+    font-size: 17px;
+  }
+
+  @media (min-width: 1024px) {
+    html { font-size: 18px; }
   }
 
   body {
@@ -114,7 +119,7 @@
     font-family: 'Familjen Grotesk', ui-sans-serif, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 1.55;
+    line-height: 1.6;
     font-weight: 400;
     letter-spacing: -0.005em;
     font-feature-settings: 'ss01', 'cv11';
