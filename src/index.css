@@ -107,6 +107,11 @@
 
   html {
     -webkit-text-size-adjust: 100%;
+    font-size: 17px;
+  }
+
+  @media (min-width: 1024px) {
+    html { font-size: 18px; }
   }
 
   body {
@@ -114,7 +119,7 @@
     font-family: 'Familjen Grotesk', ui-sans-serif, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 1.55;
+    line-height: 1.6;
     font-weight: 400;
     letter-spacing: -0.005em;
     font-feature-settings: 'ss01', 'cv11';
@@ -363,8 +368,11 @@ html { scroll-behavior: smooth; }
 ::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground) / 0.5); }
 
 /* Readable minimum text sizing — override Tailwind's small utilities site-wide */
-:where(.text-xs) { font-size: 0.8125rem; line-height: 1.25rem; }
-:where(.text-sm) { font-size: 0.9375rem; line-height: 1.4rem; }
-:where(.text-\[10px\]) { font-size: 0.75rem !important; line-height: 1.1rem !important; }
-:where(.text-\[11px\]) { font-size: 0.8125rem !important; line-height: 1.15rem !important; }
-:where(.text-\[12px\]) { font-size: 0.8125rem !important; line-height: 1.2rem !important; }
+:where(.text-xs) { font-size: 0.875rem; line-height: 1.4rem; }
+:where(.text-sm) { font-size: 1rem; line-height: 1.5rem; }
+:where(.text-base) { font-size: 1.0625rem; line-height: 1.65rem; }
+:where(.text-lg) { font-size: 1.1875rem; line-height: 1.75rem; }
+:where(.text-xl) { font-size: 1.375rem; line-height: 1.85rem; }
+:where(.text-\[10px\]) { font-size: 0.8125rem !important; line-height: 1.2rem !important; }
+:where(.text-\[11px\]) { font-size: 0.875rem !important; line-height: 1.25rem !important; }
+:where(.text-\[12px\]) { font-size: 0.875rem !important; line-height: 1.3rem !important; }
