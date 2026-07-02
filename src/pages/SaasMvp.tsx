@@ -9,14 +9,14 @@ import BuiltByArchiteq from "@/components/BuiltByArchiteq";
 const packages = [
   {
     name: "Starter MVP",
-    price: "R24 999+",
+    price: "R25 000+",
     timeline: "2–4 Weeks",
     cta: "Start My MVP",
     suitable: ["Booking systems", "Customer portals", "Membership websites", "Business dashboards", "Online platforms"],
   },
   {
     name: "Growth Platform",
-    price: "R59 999+",
+    price: "R510 000+",
     timeline: "4–8 Weeks",
     popular: true,
     cta: "Build My Platform",
@@ -52,7 +52,7 @@ const faqs = [
 const SaasMvp = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="SaaS & MVP Development South Africa · From R24,999+" description="Launch your booking system, customer portal, or SaaS MVP in weeks. Scalable foundations, modern stack, fixed-scope pricing from R24,999+." path="/services/saas-mvp" />
+      <SEO title="SaaS & MVP Development South Africa · From R25,000+" description="Launch your booking system, customer portal, or SaaS MVP in weeks. Scalable foundations, modern stack, fixed-scope pricing from R25,000+." path="/services/saas-mvp" />
       {/* HERO */}
       <section className="relative px-6 lg:px-10 pt-8 lg:pt-12 pb-14 lg:pb-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -62,7 +62,7 @@ const SaasMvp = () => {
           <div className="flex items-center justify-between mb-10">
             <span className="plate-label">SaaS & MVP Development</span>
             <span className="tabular text-[10px] tracking-[0.2em] uppercase text-muted-foreground hidden sm:inline">
-              From R24 999 · 2–4 weeks
+              From R25 000 · 2–4 weeks
             </span>
           </div>
 

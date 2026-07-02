@@ -8,12 +8,12 @@ import { fadeUp } from "@/lib/animations";
 
 const Services = () => {
   const services = [
-    { title: "Web Design Services", description: "Professional websites delivered within 7 days", features: ["1 page to 15+ pages", "Mobile Responsive", "SEO Optimized", "Fast Delivery"], startingPrice: "R1,999+", link: "/services/web-design", icon: <Globe className="h-6 w-6" /> },
-    { title: "Custom Email Services", description: "Branded business email with Gmail integration", features: ["Domain email setup", "Gmail send & receive", "Full DNS configuration", "Live in < 24 hours"], startingPrice: "R499+", link: "/services/custom-email", icon: <Settings className="h-6 w-6" /> },
-    { title: "SaaS & MVP Development", description: "Launch your software platform in weeks", features: ["Booking systems", "Customer portals", "Dashboards", "Scalable foundations"], startingPrice: "R24,999+", link: "/services/saas-mvp", icon: <Zap className="h-6 w-6" /> },
-    { title: "Custom Software Development", description: "Software built around your business workflows", features: ["Internal tools", "Automation", "Custom dashboards", "Long-term scalability"], startingPrice: "R34,999+", link: "/services/custom-software", icon: <Settings className="h-6 w-6" /> },
-    { title: "Google Business Profile", description: "Get found on Google Maps & Search", features: ["Profile Setup & Optimization", "Google Maps Listing", "Review Management", "Local SEO Boost"], startingPrice: "R749+", link: "/contact", icon: <Zap className="h-6 w-6" /> },
-    { title: "Website Care & Hosting", description: "Hosting plus everything needed to keep your site running smoothly", features: ["Hosting included", "Security updates", "Bug fixes", "Performance monitoring", "Content updates"], startingPrice: "R299+/month", link: "/contact", icon: <Settings className="h-6 w-6" /> },
+    { title: "Web Design Services", description: "Professional websites delivered within 7 days", features: ["1 page to 15+ pages", "Mobile Responsive", "SEO Optimized", "Fast Delivery"], startingPrice: "R2,000+", link: "/services/web-design", icon: <Globe className="h-6 w-6" /> },
+    { title: "Custom Email Services", description: "Branded business email with Gmail integration", features: ["Domain email setup", "Gmail send & receive", "Full DNS configuration", "Live in < 24 hours"], startingPrice: "R500+", link: "/services/custom-email", icon: <Settings className="h-6 w-6" /> },
+    { title: "SaaS & MVP Development", description: "Launch your software platform in weeks", features: ["Booking systems", "Customer portals", "Dashboards", "Scalable foundations"], startingPrice: "R25,000+", link: "/services/saas-mvp", icon: <Zap className="h-6 w-6" /> },
+    { title: "Custom Software Development", description: "Software built around your business workflows", features: ["Internal tools", "Automation", "Custom dashboards", "Long-term scalability"], startingPrice: "R35,000+", link: "/services/custom-software", icon: <Settings className="h-6 w-6" /> },
+    { title: "Google Business Profile", description: "Get found on Google Maps & Search", features: ["Profile Setup & Optimization", "Google Maps Listing", "Review Management", "Local SEO Boost"], startingPrice: "R750+", link: "/contact", icon: <Zap className="h-6 w-6" /> },
+    { title: "Website Care & Hosting", description: "Hosting plus everything needed to keep your site running smoothly", features: ["Hosting included", "Security updates", "Bug fixes", "Performance monitoring", "Content updates"], startingPrice: "R300+/month", link: "/contact", icon: <Settings className="h-6 w-6" /> },
   ];
 
   return (
@@ -94,10 +94,10 @@ const Services = () => {
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
             {[
-              { name: "Essential Single Page", price: "R1,999+", delivery: "1-2 Days", features: ["1-page website", "Mobile Responsive", "Google Business Profile", "Contact Form"] },
-              { name: "Starter Business", price: "R4,999+", delivery: "3-4 Days", features: ["Up to 5 pages", "Mobile Responsive", "Contact Form", "Basic SEO Setup", "1 Month Support"] },
-              { name: "Professional Growth", price: "R9,999+", delivery: "5-7 Days", popular: true, features: ["Up to 10 pages", "Blog Setup", "Advanced SEO", "Social Media Integration", "3 Months Support", "CMS"] },
-              { name: "Enterprise Custom", price: "R14,999+", delivery: "7-10 Days", features: ["15+ pages, unlimited scope", "E-commerce Integration", "Advanced Analytics", "Priority Support", "6 Months Support"] },
+              { name: "Essential Single Page", price: "R2,000+", delivery: "1-2 Days", features: ["1-page website", "Mobile Responsive", "Google Business Profile", "Contact Form"] },
+              { name: "Starter Business", price: "R5,000+", delivery: "3-4 Days", features: ["Up to 5 pages", "Mobile Responsive", "Contact Form", "Basic SEO Setup", "1 Month Support"] },
+              { name: "Professional Growth", price: "R10,000+", delivery: "5-7 Days", popular: true, features: ["Up to 10 pages", "Blog Setup", "Advanced SEO", "Social Media Integration", "3 Months Support", "CMS"] },
+              { name: "Enterprise Custom", price: "R15,000+", delivery: "7-10 Days", features: ["15+ pages, unlimited scope", "E-commerce Integration", "Advanced Analytics", "Priority Support", "6 Months Support"] },
             ].map((pkg, index) => (
               <motion.div key={index} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={index}
                 className={`relative p-6 rounded-3xl border transition-all duration-500 ${pkg.popular ? "border-primary ring-1 ring-primary/20 bg-primary/[0.03]" : "border-border/30 hover:border-primary/20"}`}
@@ -135,9 +135,9 @@ const Services = () => {
           </motion.div>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
-              { name: "Basic", price: "R299+/month", features: ["Hosting included", "Security updates", "Monthly backups", "Bug fixes", "Email support"] },
-              { name: "Standard", price: "R499+/month", popular: true, features: ["Everything in Basic", "Content updates", "Performance monitoring", "Priority support", "Weekly backups"] },
-              { name: "Premium", price: "R699+/month", features: ["Everything in Standard", "SEO monitoring", "Analytics reports", "24/7 support", "Daily backups", "Feature enhancements"] },
+              { name: "Basic", price: "R300+/month", features: ["Hosting included", "Security updates", "Monthly backups", "Bug fixes", "Email support"] },
+              { name: "Standard", price: "R500+/month", popular: true, features: ["Everything in Basic", "Content updates", "Performance monitoring", "Priority support", "Weekly backups"] },
+              { name: "Premium", price: "R700+/month", features: ["Everything in Standard", "SEO monitoring", "Analytics reports", "24/7 support", "Daily backups", "Feature enhancements"] },
             ].map((pkg, index) => (
               <motion.div key={index} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={index}
                 className={`relative p-6 rounded-3xl border transition-all duration-500 ${pkg.popular ? "border-primary ring-1 ring-primary/20 bg-primary/[0.03]" : "border-border/30 hover:border-primary/20"}`}

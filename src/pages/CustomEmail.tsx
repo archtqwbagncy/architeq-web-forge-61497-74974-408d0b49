@@ -7,9 +7,9 @@ import ServiceContactForm from "@/components/ServiceContactForm";
 import BuiltByArchiteq from "@/components/BuiltByArchiteq";
 
 const packages = [
-  { name: "Single Email Setup", price: "R499+", emails: "1 email address", features: ["Domain email setup", "Gmail send & receive", "Full DNS configuration", "Spam protection", "Delivery testing"] },
-  { name: "Business Starter", price: "R799+", emails: "2–4 email addresses", popular: true, features: ["Everything in Single", "2–4 branded addresses", "info@, sales@, etc.", "Per-mailbox setup", "Full setup testing"] },
-  { name: "Full Business Setup", price: "R1 999+", emails: "5–10 email addresses", features: ["Everything in Starter", "5–10 branded mailboxes", "Team-wide configuration", "DNS hardening", "Priority delivery"] },
+  { name: "Single Email Setup", price: "R500+", emails: "1 email address", features: ["Domain email setup", "Gmail send & receive", "Full DNS configuration", "Spam protection", "Delivery testing"] },
+  { name: "Business Starter", price: "R800+", emails: "2–4 email addresses", popular: true, features: ["Everything in Single", "2–4 branded addresses", "info@, sales@, etc.", "Per-mailbox setup", "Full setup testing"] },
+  { name: "Full Business Setup", price: "R2 000+", emails: "5–10 email addresses", features: ["Everything in Starter", "5–10 branded mailboxes", "Team-wide configuration", "DNS hardening", "Priority delivery"] },
   { name: "Custom Package", price: "Contact us", emails: "10+ mailboxes / custom", features: ["Unlimited business emails", "Custom routing & aliases", "Migration assistance", "Onboarding for your team", "Bespoke configuration"] },
 ];
 
@@ -43,7 +43,7 @@ const faqs = [
 const CustomEmail = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Custom Business Email Setup · Gmail-Integrated · From R499+" description="Branded business email on your domain with full Gmail send & receive, DNS configuration, and same-day setup. From R499+." path="/services/custom-email" />
+      <SEO title="Custom Business Email Setup · Gmail-Integrated · From R500+" description="Branded business email on your domain with full Gmail send & receive, DNS configuration, and same-day setup. From R500+." path="/services/custom-email" />
       {/* HERO */}
       <section className="relative px-6 lg:px-10 pt-8 lg:pt-12 pb-14 lg:pb-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

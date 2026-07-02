@@ -32,16 +32,16 @@ const Index = () => {
   ];
 
   const packages = [
-    { name: "Essential",    price: "1 999+",  days: "2",  pages: "1 page",     lines: ["One-page site", "Mobile-first", "Click-to-call", "Google Business"] },
-    { name: "Starter",      price: "4 999+",  days: "4",  pages: "Up to 5",    lines: ["5 pages", "Service area map", "Quote form", "Reviews block"] },
-    { name: "Professional", price: "9 999+",  days: "7",  pages: "Up to 10",   lines: ["10 pages + blog", "Local SEO setup", "Lead routing", "Booking-ready"], popular: true },
-    { name: "Enterprise",   price: "14 999+", days: "10", pages: "15+ pages",  lines: ["Unlimited pages", "Analytics + tracking", "Priority support", "Custom features"] },
+    { name: "Essential",    price: "2 000+",  days: "2",  pages: "1 page",     lines: ["One-page site", "Mobile-first", "Click-to-call", "Google Business"] },
+    { name: "Starter",      price: "5 000+",  days: "4",  pages: "Up to 5",    lines: ["5 pages", "Service area map", "Quote form", "Reviews block"] },
+    { name: "Professional", price: "10 000+",  days: "7",  pages: "Up to 10",   lines: ["10 pages + blog", "Local SEO setup", "Lead routing", "Booking-ready"], popular: true },
+    { name: "Enterprise",   price: "15 000+", days: "10", pages: "15+ pages",  lines: ["Unlimited pages", "Analytics + tracking", "Priority support", "Custom features"] },
   ];
 
   const newServices = [
-    { icon: <Mail className="h-6 w-6" />, title: "Custom Email Services", body: "Branded business email setup with Gmail integration. Zero monthly cost, live in under 24 hours.", price: "From R499+", timeline: "< 24 hours", cta: "Get Professional Email", href: "/services/custom-email" },
-    { icon: <Rocket className="h-6 w-6" />, title: "SaaS & MVP Development", body: "Turn your business idea into a working online platform — booking systems, portals, dashboards, subscription products.", price: "From R24 999+", timeline: "2–4 weeks", cta: "Build My Platform", href: "/services/saas-mvp" },
-    { icon: <Cpu className="h-6 w-6" />, title: "Custom Software Development", body: "Custom software built around your business goals, processes and workflows. Internal tools, automation, full platforms.", price: "From R34 999+", timeline: "3–6 weeks", cta: "Get A Software Quote", href: "/services/custom-software" },
+    { icon: <Mail className="h-6 w-6" />, title: "Custom Email Services", body: "Branded business email setup with Gmail integration. Zero monthly cost, live in under 24 hours.", price: "From R500+", timeline: "< 24 hours", cta: "Get Professional Email", href: "/services/custom-email" },
+    { icon: <Rocket className="h-6 w-6" />, title: "SaaS & MVP Development", body: "Turn your business idea into a working online platform — booking systems, portals, dashboards, subscription products.", price: "From R25 000+", timeline: "2–4 weeks", cta: "Build My Platform", href: "/services/saas-mvp" },
+    { icon: <Cpu className="h-6 w-6" />, title: "Custom Software Development", body: "Custom software built around your business goals, processes and workflows. Internal tools, automation, full platforms.", price: "From R35 000+", timeline: "3–6 weeks", cta: "Get A Software Quote", href: "/services/custom-software" },
   ];
 
   const usp = [
@@ -54,7 +54,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Architeq · Lead-Gen Websites Live in 7 Days · South Africa" description="Gauteng-based web agency building lead-generating websites for South African businesses. Fixed price, live in 7 days. Starting at R1,999+." path="/" />
+      <SEO title="Architeq · Lead-Gen Websites Live in 7 Days · South Africa" description="Gauteng-based web agency building lead-generating websites for South African businesses. Fixed price, live in 7 days. Starting at R2,000+." path="/" />
       {/* ============ HERO ============ */}
       <section className="relative px-6 lg:px-10 pt-8 lg:pt-12 pb-14 lg:pb-20 overflow-hidden">
         <div className="mx-auto max-w-7xl">
