@@ -16,7 +16,7 @@ const packages = [
   },
   {
     name: "Growth Platform",
-    price: "R510 000+",
+    price: "R60 000+",
     timeline: "4–8 Weeks",
     popular: true,
     cta: "Build My Platform",
