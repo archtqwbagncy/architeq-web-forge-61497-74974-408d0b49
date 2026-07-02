@@ -2,14 +2,16 @@ import React from "react";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Phone, Star, Check, Mail, Rocket, Cpu, ArrowUpRight, Gauge, Milestone, MessagesSquare, Zap, Target } from "lucide-react";
+import { Phone, Star, Check, Mail, Rocket, Cpu, ArrowUpRight, Gauge, Milestone, MessagesSquare, Zap, Target, MapPin, Shield } from "lucide-react";
 
 const Index = () => {
-  const services = [
-    { title: "Websites that bring in leads", line: "Built for phones first, designed to turn searches into booked jobs." },
-    { title: "Google Business setup", line: "Get found on Google Maps. Reviews, photos and service areas sorted for you." },
-    { title: "Quote and booking forms", line: "Capture the right details upfront so you can quote without phone tag." },
-    { title: "Website care and hosting", line: "We host your site, keep it fast, secure and up to date — all in one monthly plan." },
+  const mainServices = [
+    { icon: <Zap className="h-6 w-6" />, title: "Web Design", body: "Lead-generating websites built for phones first. 1 page to 15+ pages, live in 7 days.", price: "R2,000+", timeline: "5–7 days", cta: "Get a quote", href: "/services/web-design" },
+    { icon: <Mail className="h-6 w-6" />, title: "Custom Email", body: "Branded business email with Gmail integration. Zero monthly cost, live in under 24 hours.", price: "R500+", timeline: "< 24 hours", cta: "Set up email", href: "/services/custom-email" },
+    { icon: <Rocket className="h-6 w-6" />, title: "SaaS & MVP", body: "Turn your idea into a working platform — booking systems, portals, dashboards, subscriptions.", price: "R25,000+", timeline: "2–4 weeks", cta: "Start my MVP", href: "/services/saas-mvp" },
+    { icon: <Cpu className="h-6 w-6" />, title: "Custom Software", body: "Software built around your workflows. Internal tools, automation, and full company platforms.", price: "R35,000+", timeline: "3–6 weeks", cta: "Get a quote", href: "/services/custom-software" },
+    { icon: <MapPin className="h-6 w-6" />, title: "Google Business", body: "Get found on Google Maps and Search. Profile setup, reviews, photos, and local SEO sorted.", price: "R750+", timeline: "1–2 days", cta: "Get visible", href: "/contact" },
+    { icon: <Shield className="h-6 w-6" />, title: "Website Care", body: "Hosting, security updates, backups, and performance monitoring — all in one monthly plan.", price: "R300+/month", timeline: "Ongoing", cta: "Protect my site", href: "/contact" },
   ];
 
   const industries = [
@@ -36,12 +38,6 @@ const Index = () => {
     { name: "Starter",      price: "5 000+",  days: "4",  pages: "Up to 5",    lines: ["5 pages", "Service area map", "Quote form", "Reviews block"] },
     { name: "Professional", price: "10 000+",  days: "7",  pages: "Up to 10",   lines: ["10 pages + blog", "Local SEO setup", "Lead routing", "Booking-ready"], popular: true },
     { name: "Enterprise",   price: "15 000+", days: "10", pages: "15+ pages",  lines: ["Unlimited pages", "Analytics + tracking", "Priority support", "Custom features"] },
-  ];
-
-  const newServices = [
-    { icon: <Mail className="h-6 w-6" />, title: "Custom Email Services", body: "Branded business email setup with Gmail integration. Zero monthly cost, live in under 24 hours.", price: "From R500+", timeline: "< 24 hours", cta: "Get Professional Email", href: "/services/custom-email" },
-    { icon: <Rocket className="h-6 w-6" />, title: "SaaS & MVP Development", body: "Turn your business idea into a working online platform — booking systems, portals, dashboards, subscription products.", price: "From R25 000+", timeline: "2–4 weeks", cta: "Build My Platform", href: "/services/saas-mvp" },
-    { icon: <Cpu className="h-6 w-6" />, title: "Custom Software Development", body: "Custom software built around your business goals, processes and workflows. Internal tools, automation, full platforms.", price: "From R35 000+", timeline: "3–6 weeks", cta: "Get A Software Quote", href: "/services/custom-software" },
   ];
 
   const usp = [
@@ -136,80 +132,25 @@ const Index = () => {
 
       <div className="rule" />
 
-      {/* ============ INDUSTRIES MARQUEE ============ */}
-      <section className="py-6 lg:py-8 overflow-hidden bg-foreground text-background">
-        <div className="flex marquee-track whitespace-nowrap" style={{ width: "max-content" }}>
-          {[...industries, ...industries, ...industries].map((t, i) => (
-            <span key={i} className="display flex items-center gap-10 px-6 text-3xl lg:text-5xl font-medium tracking-tight">
-              {t}
-              <span className="text-primary text-xl">●</span>
-            </span>
-          ))}
-        </div>
-      </section>
-
-      {/* ============ SERVICES ============ */}
-      <section className="px-6 lg:px-10 py-14 lg:py-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="flex items-end justify-between mb-12 lg:mb-20">
-            <div>
-              <span className="plate-label mb-4 block">What we build</span>
-              <h2 className="display max-w-3xl" style={{ fontSize: "clamp(2rem, 5vw, 4.5rem)" }}>
-                Simple tools.
-                <br />
-                <span className="text-muted-foreground">Built to bring in work.</span>
-              </h2>
-            </div>
-            <Link to="/services" className="hidden md:inline-flex btn-ghost-line text-sm">
-              See full menu →
-            </Link>
-          </div>
-
-          <div>
-            {services.map((s, i) => (
-              <motion.div
-                key={s.title}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.5, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
-                className="group grid grid-cols-[1fr_auto] items-baseline gap-6 lg:gap-12 py-6 lg:py-8 border-t last:border-b transition-colors"
-                style={{ borderColor: "hsl(var(--rule))" }}
-              >
-                <div>
-                  <h3 className="display text-2xl lg:text-4xl font-medium mb-2">{s.title}</h3>
-                  <p className="text-muted-foreground text-base lg:text-lg max-w-2xl leading-relaxed">{s.line}</p>
-                </div>
-                <span className="hidden lg:inline-flex tabular text-xs tracking-[0.18em] uppercase text-muted-foreground group-hover:text-foreground transition-colors">
-                  Detail →
-                </span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="rule" />
-
-      {/* ============ NEW SERVICES ============ */}
+      {/* ============ MAIN SERVICES ============ */}
       <section className="px-6 lg:px-10 py-14 lg:py-20 bg-muted/30">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-16">
             <div>
-              <span className="plate-label mb-4 block">More from Architeq</span>
+              <span className="plate-label mb-4 block">What we do</span>
               <h2 className="display max-w-3xl" style={{ fontSize: "clamp(2rem, 5vw, 4.5rem)" }}>
-                Beyond websites.
+                Web services that
                 <br />
-                <span className="text-muted-foreground">Email, platforms, software.</span>
+                <span className="text-primary">grow your business.</span>
               </h2>
             </div>
             <p className="text-muted-foreground max-w-sm">
-              Three more ways we help South African businesses move faster — branded inboxes, MVP launches, and custom software.
+              Six ways we help South African businesses move faster online — from websites to custom software.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-5">
-            {newServices.map((s, i) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {mainServices.map((s, i) => (
               <motion.div
                 key={s.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -242,6 +183,20 @@ const Index = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <div className="rule" />
+
+      {/* ============ INDUSTRIES MARQUEE ============ */}
+      <section className="py-6 lg:py-8 overflow-hidden bg-foreground text-background">
+        <div className="flex marquee-track whitespace-nowrap" style={{ width: "max-content" }}>
+          {[...industries, ...industries, ...industries].map((t, i) => (
+            <span key={i} className="display flex items-center gap-10 px-6 text-3xl lg:text-5xl font-medium tracking-tight">
+              {t}
+              <span className="text-primary text-xl">●</span>
+            </span>
+          ))}
         </div>
       </section>
 
