@@ -16,7 +16,7 @@ const packages = [
   },
   {
     name: "Advanced Software Solutions",
-    price: "R710 000+",
+    price: "R80 000+",
     timeline: "6–16 Weeks",
     popular: true,
     cta: "Request A Quote",
