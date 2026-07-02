@@ -13,25 +13,25 @@ const PATH = "/blog/web-design-cost-south-africa";
 const tiers = [
   {
     name: "One-page website",
-    range: "R1,999 – R4,500",
+    range: "R2,000 – R4,500",
     fit: "Solo operators, trades, pop-up brands, simple lead capture.",
     includes: ["Mobile-first layout", "Contact form & WhatsApp link", "Google Business Profile setup", "Basic on-page SEO"],
   },
   {
     name: "Small business site (3–5 pages)",
-    range: "R4,999 – R9,000",
+    range: "R5,000 – R9,000",
     fit: "Plumbers, electricians, salons, cafés, local service brands.",
     includes: ["Home, About, Services, Contact", "SEO-ready copy structure", "Lead form + email routing", "1 month of edits included"],
   },
   {
     name: "Growth website (6–10 pages)",
-    range: "R9,999 – R18,000",
+    range: "R10,000 – R18,000",
     fit: "Established businesses with multiple services or locations.",
     includes: ["Blog/CMS", "Advanced SEO setup", "Analytics & tracking", "Social integrations", "3 months support"],
   },
   {
     name: "Custom / e-commerce",
-    range: "R14,999 – R45,000+",
+    range: "R15,000 – R45,000+",
     fit: "Online stores, booking platforms, multi-location brands.",
     includes: ["Payments & checkout", "Custom features", "Performance tuning", "6 months support"],
   },
@@ -43,14 +43,14 @@ const factors = [
   { title: "Copywriting", body: "If you write the words yourself, you save money. If the agency writes them for you, expect to add R1,500 to R6,000." },
   { title: "Photography", body: "Stock photos are free or cheap. A short brand shoot in Gauteng starts around R2,500." },
   { title: "Functionality", body: "Booking systems, payments, member logins and integrations all add cost. A simple contact form does not." },
-  { title: "Hosting & domain", body: "Expect R150 to R350 a month for hosting and R150 to R250 a year for a .co.za domain. Our care plans from R299/month include hosting." },
+  { title: "Hosting & domain", body: "Expect R150 to R350 a month for hosting and R150 to R250 a year for a .co.za domain. Our care plans from R300/month include hosting." },
   { title: "Ongoing maintenance", body: "Updates, backups, security and small edits. Skip this and small problems quietly become big ones." },
 ];
 
 const faqs = [
-  { q: "How much does a website cost in South Africa in 2026?", a: "A simple one-page site starts around R1,999. Most small businesses spend between R5,000 and R15,000 for a complete site. Custom builds and online stores typically run R20,000 to R45,000 or more." },
+  { q: "How much does a website cost in South Africa in 2026?", a: "A simple one-page site starts around R2,000. Most small businesses spend between R5,000 and R15,000 for a complete site. Custom builds and online stores typically run R20,000 to R45,000 or more." },
   { q: "Why are some web design quotes so cheap?", a: "Very low quotes often skip strategy, SEO, mobile testing, hosting and support. You get a site that exists but does not bring in work. Always ask what is included and what happens after launch." },
-  { q: "Do I pay monthly or once-off?", a: "At Architeq the build is a once-off fixed price. Hosting, domain and maintenance are monthly from R299. You own the site." },
+  { q: "Do I pay monthly or once-off?", a: "At Architeq the build is a once-off fixed price. Hosting, domain and maintenance are monthly from R300. You own the site." },
   { q: "How long does it take?", a: "We deliver in 7 days. The average is 5 days once we have your content and brand details." },
   { q: "Do I need a designer and a developer?", a: "Not with us. One team handles design, build, copy structure, SEO and launch under one fixed quote." },
 ];
@@ -131,7 +131,7 @@ export default function BlogWebDesignCost() {
           <div className="rounded-3xl border border-border/40 bg-muted/30 p-8 lg:p-10">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">Short answer</h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              In South Africa, a basic one-page website starts around <strong className="text-foreground">R1,999</strong>. Most small businesses pay between <strong className="text-foreground">R5,000 and R15,000</strong> for a complete site. Custom builds and online stores usually run <strong className="text-foreground">R20,000 to R45,000+</strong>. Hosting and care plans add about <strong className="text-foreground">R299–R699 per month</strong>.
+              In South Africa, a basic one-page website starts around <strong className="text-foreground">R2,000</strong>. Most small businesses pay between <strong className="text-foreground">R5,000 and R15,000</strong> for a complete site. Custom builds and online stores usually run <strong className="text-foreground">R20,000 to R45,000+</strong>. Hosting and care plans add about <strong className="text-foreground">R300–R700 per month</strong>.
             </p>
           </div>
         </div>
@@ -188,7 +188,7 @@ export default function BlogWebDesignCost() {
           <div className="space-y-4 text-muted-foreground leading-relaxed text-base md:text-lg">
             <p>A R500 site usually means a free template, no strategy, no real SEO, no testing on phones, and no support after launch. It looks like a website but it does not bring in work.</p>
             <p>Most business owners who start there pay again within a year to rebuild properly. The cheaper option ends up being the most expensive one.</p>
-            <p>A fair, working website for a South African small business starts around <strong className="text-foreground">R4,999</strong>. That is the honest number.</p>
+            <p>A fair, working website for a South African small business starts around <strong className="text-foreground">R5,000</strong>. That is the honest number.</p>
           </div>
         </div>
       </section>

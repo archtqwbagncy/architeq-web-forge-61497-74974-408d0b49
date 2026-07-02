@@ -9,14 +9,14 @@ import BuiltByArchiteq from "@/components/BuiltByArchiteq";
 const packages = [
   {
     name: "Business Software",
-    price: "R34 999+",
+    price: "R35 000+",
     timeline: "3–6 Weeks",
     cta: "Get Started",
     suitable: ["Staff management systems", "Inventory tracking", "Customer management", "Internal business tools", "Custom dashboards"],
   },
   {
     name: "Advanced Software Solutions",
-    price: "R79 999+",
+    price: "R80 000+",
     timeline: "6–16 Weeks",
     popular: true,
     cta: "Request A Quote",
@@ -52,7 +52,7 @@ const faqs = [
 const CustomSoftware = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Custom Software Development · Internal Tools & Automation" description="Custom software built around your workflows — internal tools, automation, dashboards, integrations. From R34,999+." path="/services/custom-software" />
+      <SEO title="Custom Software Development · Internal Tools & Automation" description="Custom software built around your workflows — internal tools, automation, dashboards, integrations. From R35,000+." path="/services/custom-software" />
       {/* HERO */}
       <section className="relative px-6 lg:px-10 pt-8 lg:pt-12 pb-14 lg:pb-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -62,7 +62,7 @@ const CustomSoftware = () => {
           <div className="flex items-center justify-between mb-10">
             <span className="plate-label">Custom Software Development</span>
             <span className="tabular text-[10px] tracking-[0.2em] uppercase text-muted-foreground hidden sm:inline">
-              From R34 999 · 3–6 weeks
+              From R35 000 · 3–6 weeks
             </span>
           </div>
 
