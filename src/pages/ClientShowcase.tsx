@@ -16,6 +16,9 @@ const ClientShowcase = () => {
     { quote: "They built our first website 3 years ago and built our new one now. Seamless procedure, always a phone call away and beautiful work as always. Definitely the best around.", author: "H & N House of Beauty" },
     { quote: "I had such a great experience with Architeq. They made the whole process of building my website super easy and enjoyable, and the final result looks amazing. The site is clean, simple to use, and exactly what I wanted.", author: "Kebogile Mokgoebo" },
     { quote: "Best services and a Great Web Agency I can recommend. I've gotten the best service and the best outcome, everything running smoothly to the tea.", author: "PHILLY JAROAM" },
+    { quote: "The best at building systems and softwares that automate our workflows. We never had a problem with communication and they are definitely value for money. Love them", author: "Th Dpst Smrttrdr" },
+    { quote: "Always quick to help when needed. They have sorted out all our presence on the internet with no hassles and clear communication all the time. The best around for a few years now", author: "KTL Makeup Glam" },
+    { quote: "Excellent service! Everything was handled professionally and efficiently", author: "Maputle Manaka" },
   ];
 
   const stats = [
