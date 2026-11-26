@@ -21,7 +21,7 @@ const ServiceContactForm: React.FC<Props> = ({ service, heading = "Request a quo
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       toast({ title: "Missing fields", description: "Please fill in name, email, and message.", variant: "destructive" });
       return;
     }
@@ -31,8 +31,9 @@ const ServiceContactForm: React.FC<Props> = ({ service, heading = "Request a quo
       const result = await sendEmail({
         name: formData.name,
         email: formData.email,
+        phone: formData.phone,
         service,
-        message: `Phone: ${formData.phone}\n\n${formData.message}`,
+        message: formData.message,
       });
       if (!result.success) throw new Error();
       toast({ title: "Message sent", description: "Thanks — we'll be in touch within 24 hours." });

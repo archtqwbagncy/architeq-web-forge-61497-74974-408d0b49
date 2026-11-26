@@ -10,6 +10,15 @@ import { ArrowUpRight, Phone, Mail, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/animations";
 
+const SERVICE_LABELS: Record<string, string> = {
+  "discovery-call": "Book Discovery Call",
+  website: "Website Design & Development",
+  "web-app": "Custom Web Application",
+  redesign: "Website Redesign",
+  ecommerce: "E-commerce Store",
+  other: "Other",
+};
+
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -17,12 +26,12 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.phone || !formData.message) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim() || !formData.message.trim()) {
       toast({ title: "Error", description: "Please fill in all required fields.", variant: "destructive" });
       return;
     }
     const phoneRegex = /^[0-9+\s()-]{10,}$/;
-    if (!phoneRegex.test(formData.phone)) {
+    if (!phoneRegex.test(formData.phone.trim())) {
       toast({ title: "Error", description: "Please enter a valid phone number.", variant: "destructive" });
       return;
     }
@@ -32,7 +41,8 @@ const Contact = () => {
       const result = await sendEmail({
         name: formData.name,
         email: formData.email,
-        service: formData.service,
+        phone: formData.phone,
+        service: SERVICE_LABELS[formData.service] || formData.service,
         message: formData.message,
       });
 
@@ -113,7 +123,7 @@ const Contact = () => {
                   <div className="space-y-2">
                     <Label htmlFor="service" className="text-sm">Service Interested In</Label>
                     <Select value={formData.service} onValueChange={(value) => handleInputChange("service", value)} disabled={isSubmitting}>
-                      <SelectTrigger className="rounded-xl h-11 border-border/50"><SelectValue placeholder="Select a service" /></SelectTrigger>
+                      <SelectTrigger id="service" className="rounded-xl h-11 border-border/50"><SelectValue placeholder="Select a service" /></SelectTrigger>
                       <SelectContent>
                         <SelectItem value="discovery-call">Book Discovery Call</SelectItem>
                         <SelectItem value="website">Website Design & Development</SelectItem>
