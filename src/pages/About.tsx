@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight, ArrowRight, Calendar, Users, Settings, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/animations";
+import PartnersBand from "@/components/PartnersBand";
 
 const About = () => {
   const values = [
@@ -50,6 +51,8 @@ const About = () => {
           </motion.div>
         </div>
       </section>
+
+      <PartnersBand />
 
       {/* Story */}
       <section className="py-14 lg:py-20 border-t border-border/30">

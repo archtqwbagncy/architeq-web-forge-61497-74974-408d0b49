@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Star, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/animations";
+import PartnersBand from "@/components/PartnersBand";
 
 const ClientShowcase = () => {
   const clientLogos = [
@@ -53,6 +54,8 @@ const ClientShowcase = () => {
           </motion.div>
         </div>
       </section>
+
+      <PartnersBand />
 
       {/* Client Logos */}
       <section className="py-20 border-t border-border/30">

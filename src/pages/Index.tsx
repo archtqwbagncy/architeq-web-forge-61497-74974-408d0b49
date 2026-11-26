@@ -1,5 +1,6 @@
 import React from "react";
 import SEO from "@/components/SEO";
+import PartnersBand from "@/components/PartnersBand";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Phone, Star, Check, Mail, Rocket, Cpu, ArrowUpRight, Gauge, Milestone, MessagesSquare, Zap, Target, MapPin, Shield } from "lucide-react";
@@ -122,8 +123,10 @@ const Index = () => {
             </div>
           </motion.div>
 
+          <PartnersBand variant="hero" />
+
           {/* Tick rule under CTAs */}
-          <div className="mt-12 lg:mt-16 tick-row" aria-hidden>
+          <div className="mt-8 lg:mt-10 tick-row" aria-hidden>
             {Array.from({ length: 40 }).map((_, i) => <i key={i} />)}
           </div>
 
